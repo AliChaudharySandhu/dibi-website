@@ -1,0 +1,8 @@
+/* Custom overrides */
+body {
+    scroll-behavior: smooth;
+  }
+  .navbar-brand {
+    letter-spacing: 0.5px;
+  }
+  
