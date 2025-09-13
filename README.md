@@ -10,11 +10,11 @@ Built with **HTML, CSS, Bootstrap**, and deployed with **GitHub Pages**.
 - Lightweight static hosting on GitHub Pages
 
 ## 📂 Structure
-en/ → English pages
-ind/ → Indonesian pages
-assets/css → Custom CSS
-assets/js → Small JS enhancements
-assets/img → Images & logos
+- en/ → English pages
+- ind/ → Indonesian pages
+- assets/css → Custom CSS
+- assets/js → Small JS enhancements
+- assets/images → Images & logos
 
 ## 🔧 Deployment
 CI/CD is configured via GitHub Actions. Every push to `main` auto-deploys to:
