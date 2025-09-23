@@ -1,8 +1,441 @@
-/* Custom overrides */
+/* --------- Global CSS and Custom overrides ------------------*/
+
+html,
 body {
-    scroll-behavior: smooth;
-  }
-  .navbar-brand {
-    letter-spacing: 0.5px;
-  }
-  
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* full viewport height */
+  scroll-behavior: smooth;
+}
+
+main {
+  flex: 1; /* take available space */
+}
+
+
+/* ---------------------- Navbar Custom CSS ----------------- */
+/* Navbar custom tweaks */
+.navbar-brand img {
+  max-height: 30px;
+}
+
+.navbar-brand {
+  letter-spacing: 0.5px;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffc107 !important;
+  /* highlight on hover */
+}
+
+.dropdown-menu .dropdown-item.active {
+  background-color: #0d6efd;
+  /* Bootstrap primary */
+  color: #fff;
+}
+
+.bg-primary-subtle {
+  background: #e9f1ff !important;
+  color: #0d6efd !important;
+}
+
+.bg-success-subtle {
+  background: #eaf7f0 !important;
+  color: #198754 !important;
+}
+
+
+/* ---------------------Homepage ---------------- */
+/* Hero images keep aspect and crop nicely */
+.hero-img {
+  max-height: 70vh;
+  object-fit: cover;
+}
+
+/* Simple partner tiles if you don't have logos yet */
+.partner-tile {
+  display: grid;
+  place-items: center;
+  min-height: 80px;
+  padding: 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  background: #fff;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Spacing tweaks */
+section+section {
+  scroll-margin-top: 80px;
+  /* if you link to sections later */
+}
+
+/* small circular icon “bubble” */
+.icon-bubble {
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(13, 110, 253, 0.08);
+  /* subtle tint; overridden by text color */
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* ------- Fancy Highlight Pillars ------------*/
+.highlights {
+  background: #f0f6ff;
+}
+
+.pillar-box {
+  background: #fff;
+  border: 1px solid #e9ecef;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.pillar-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.08);
+}
+
+.pillar-icon {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+/* Optional accent background hover */
+.pillar-box:hover .pillar-icon {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}
+
+/* ------------ Partner Logo Wall ----------*/
+/* Logo card base */
+.logo-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: #fff;
+  border: 1px solid #e9ecef;
+  border-radius: 1rem;
+  padding: 1rem;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect: lift up */
+.logo-card:hover {
+  transform: translateY(-6px);
+  /* moves card upward */
+  box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.1);
+  /* subtle shadow */
+}
+
+.logo-frame {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.logo-frame img {
+  width: 100%;
+  /* takes full width of its parent */
+  height: auto;
+  /* keeps natural aspect ratio */
+  object-fit: contain;
+}
+
+/* -----------------Investegators and Team ---------- */
+/* Circular avatar placeholder */
+.avatar-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: #f1f3f5;
+  /* light grey fallback */
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+.avatar-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* fills circle nicely */
+}
+
+.section-researchers {
+  background: #f0f6ff;
+}
+
+/* Researcher pills */
+.researcher-pill {
+  display: flex;
+  align-items: baseline;
+  gap: .5rem;
+  padding: .75rem .9rem;
+  border: 1px solid #e9ecef;
+  border-radius: .75rem;
+  background: #fff;
+}
+
+.researcher-pill .r-name {
+  font-weight: 600;
+}
+
+.researcher-pill .r-org {
+  color: #6c757d;
+  /* muted */
+  font-size: .95rem;
+}
+
+/* Compact researcher tiles */
+.researcher-tile {
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.researcher-tile:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 .75rem 1.25rem rgba(0, 0, 0, .06);
+  border-color: #dee2e6;
+}
+
+/* Circle initials avatar (auto text via data-attr) */
+.avatar-initial {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #e9f2ff;
+  color: #0d6efd;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  letter-spacing: .5px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.avatar-initial::after {
+  content: attr(data-initial);
+  font-size: .9rem;
+}
+
+/* Org pill */
+.org-pill {
+  display: inline-block;
+  margin-top: .15rem;
+  padding: .15rem .5rem;
+  font-size: .8rem;
+  color: #495057;
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 999px;
+}
+
+/* ---------------- Locations: visual header --------------- */
+.loc-hero {
+  min-height: 180px;
+  background:
+    linear-gradient(160deg, rgba(13, 110, 253, .85), rgba(25, 135, 84, .85)),
+    url("assets/img/map-id-au.svg") center/cover no-repeat;
+  /* replace with your map/visual */
+  border-bottom: 1px solid rgba(255, 255, 255, .25);
+}
+
+/* Dot bullets for locations */
+.loc-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  display: inline-block;
+  flex: 0 0 auto;
+  border: 1px solid rgba(0, 0, 0, .06);
+}
+
+/* Subtle separators between location rows */
+.loc-item+.loc-item {
+  border-top: 1px dashed #e9ecef;
+}
+
+/* --- Keyword cloud chips --- */
+.kw-chip {
+  display: inline-block;
+  padding: .4rem .6rem;
+  border-radius: .75rem;
+  font-size: .9rem;
+  border: 1px solid transparent;
+  background: #f8f9fa;
+  color: #343a40;
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+
+.kw-chip:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .06);
+  border-color: #e9ecef;
+}
+
+/* Category accents */
+.theme-energy {
+  background: #f1f8ff;
+  border-color: #d9e8ff;
+  color: #0d6efd;
+}
+
+.theme-ops {
+  background: #f0fff4;
+  border-color: #d6f5e3;
+  color: #198754;
+}
+
+.theme-built {
+  background: #fff5f0;
+  border-color: #ffe0d6;
+  color: #d9480f;
+}
+
+.theme-equity {
+  background: #f8f5ff;
+  border-color: #e7ddff;
+  color: #6f42c1;
+}
+
+/* Legend */
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.bg-theme-energy {
+  background: #0d6efd;
+}
+
+.bg-theme-ops {
+  background: #198754;
+}
+
+.bg-theme-built {
+  background: #fd7e14;
+}
+
+.bg-theme-equity {
+  background: #6f42c1;
+}
+
+.legend-text {
+  font-size: .85rem;
+  color: #6c757d;
+}
+
+/* --- Document list --- */
+.doc-list {
+  display: grid;
+  gap: .5rem;
+}
+
+.doc-item {
+  display: grid;
+  grid-template-columns: 56px 1fr auto;
+  align-items: center;
+  gap: .75rem;
+  padding: .75rem .9rem;
+  border: 1px solid #e9ecef;
+  border-radius: .75rem;
+  background: #fff;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color .15s ease, background .15s ease, transform .15s ease, box-shadow .15s ease;
+}
+
+.doc-item:hover {
+  border-color: #dfe5ea;
+  background: #f9fbff;
+  transform: translateY(-2px);
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .05);
+}
+
+.doc-icon {
+  display: grid;
+  place-items: center;
+  height: 40px;
+  width: 56px;
+  border-radius: .5rem;
+  background: #eef4ff;
+  color: #0d6efd;
+  font-weight: 700;
+  font-size: .8rem;
+  letter-spacing: .5px;
+}
+
+.doc-title {
+  font-weight: 600;
+}
+
+.doc-sub {
+  font-size: .85rem;
+}
+
+.doc-cta {
+  font-size: .85rem;
+  color: #0d6efd;
+  font-weight: 600;
+}
+
+/* --- Timeline --- */
+.timeline-item {
+  position: relative;
+  display: flex;
+  gap: .75rem;
+  padding: .75rem 0;
+}
+
+.timeline-item+.timeline-item {
+  border-top: 1px dashed #e9ecef;
+}
+
+.t-dot {
+  width: .6rem;
+  height: .6rem;
+  border-radius: 999px;
+  flex: 0 0 auto;
+  margin-top: .35rem;
+}
+
+.t-meta .small {
+  line-height: 1.25;
+}
+
+/* Pills (Bootstrap “subtle” backgrounds used in badges above) */
+.bg-primary-subtle {
+  background: #e9f1ff !important;
+}
+
+.bg-success-subtle {
+  background: #eaf7f0 !important;
+}
+
+.text-primary {
+  color: #0d6efd !important;
+}
+
+.text-success {
+  color: #198754 !important;
+}

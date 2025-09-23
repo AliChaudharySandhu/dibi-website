@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Knowledge Hub | DIBI</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <script src="../assets/js/include.js"></script>
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <main class="py-5">
+    <div class="container">
+      <header class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-4">
+        <div>
+          <h1 class="display-6 fw-semibold mb-0">Knowledge Hub</h1>
+          <p class="text-muted mb-0">Reports, briefs, and case studies from the project.</p>
+        </div>
+        <form class="d-flex" role="search" onsubmit="return false;">
+          <input class="form-control" type="search" placeholder="Search outputs…" aria-label="Search">
+        </form>
+      </header>
+
+      <!-- Filters -->
+      <div class="d-flex flex-wrap gap-2 mb-4">
+        <button class="btn btn-sm btn-outline-primary active">All</button>
+        <button class="btn btn-sm btn-outline-primary">Reports</button>
+        <button class="btn btn-sm btn-outline-primary">Case Studies</button>
+        <button class="btn btn-sm btn-outline-primary">Briefs</button>
+        <button class="btn btn-sm btn-outline-primary">Slides</button>
+      </div>
+
+      <!-- Outputs grid -->
+      <div class="row g-4">
+        <!-- Card -->
+        <div class="col-md-6 col-lg-4">
+          <a class="text-decoration-none" href="../assets/docs/depot-efficiency.pdf">
+            <div class="card h-100 border-0 shadow-sm rounded-4">
+              <div class="card-body">
+                <span class="badge bg-primary-subtle text-primary mb-2">Report</span>
+                <h2 class="h5">Depot Energy Efficiency</h2>
+                <p class="text-muted small mb-3">Baseline assessment of energy use, thermal comfort, and noise in a major bus terminal.</p>
+                <div class="d-flex justify-content-between small text-muted">
+                  <span>Updated Aug 2025</span>
+                  <span>PDF · 1.2 MB</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <a class="text-decoration-none" href="../assets/docs/air-quality-baseline.pdf">
+            <div class="card h-100 border-0 shadow-sm rounded-4">
+              <div class="card-body">
+                <span class="badge bg-primary-subtle text-primary mb-2">Report</span>
+                <h2 class="h5">Air Quality Baseline</h2>
+                <p class="text-muted small mb-3">Monitoring PM, carbon, and nitrates to inform operations and policy.</p>
+                <div class="d-flex justify-content-between small text-muted">
+                  <span>Updated Aug 2025</span>
+                  <span>PDF · 980 KB</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <a class="text-decoration-none" href="../assets/docs/renewable-integration.pdf">
+            <div class="card h-100 border-0 shadow-sm rounded-4">
+              <div class="card-body">
+                <span class="badge bg-success-subtle text-success mb-2">Case Study</span>
+                <h2 class="h5">Renewable Integration</h2>
+                <p class="text-muted small mb-3">Solar PV and BESS options for depot charging strategies.</p>
+                <div class="d-flex justify-content-between small text-muted">
+                  <span>Updated Jul 2025</span>
+                  <span>PDF · 1.6 MB</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <a class="btn btn-outline-secondary btn-sm" href="#">Load more</a>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer"></div>
+
+  <!-- Bootstrap JS + Include script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <script src="../assets/js/include.js"></script>
+</body>
+</html>

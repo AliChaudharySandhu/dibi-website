@@ -1,46 +1,769 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>DIBI Knowledge Platform – Home</title>
-  <link 
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
-    rel="stylesheet" 
-    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" 
-    crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link rel="stylesheet" href="../assets/css/styles.css" />
+  <script src="../assets/js/include.js"></script>
 </head>
-<body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg bg-light border-bottom">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="./index.html">DIBI Platform</a>
-      <div>
-        <a class="btn btn-outline-secondary btn-sm" href="../id/index.html">Bahasa Indonesia</a>
-        <a class="btn btn-dark btn-sm" href="./index.html">English</a>
-      </div>
-    </div>
-  </nav>
 
-  <!-- Hero Section -->
-  <header class="py-5 bg-light border-bottom">
-    <div class="container">
-      <h1 class="display-5 fw-bold">Decarbonisation Pathways for Indonesia’s Buses</h1>
-      <p class="lead">A bilingual knowledge platform sharing research, case studies, and inclusive practices (GEDSI).</p>
+<body>
+  <!-- Navbar (injected) -->
+  <div id="navbar"></div>
+
+  <!-- HERO: Carousel -->
+  <header class="bg-dark">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"
+          aria-current="true"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+      </div>
+
+      <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="1200" height="500"
+            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice"
+            focusable="false">
+            <rect width="100%" height="100%" fill="#6c757d"></rect>
+            <text x="50%" y="50%" fill="#fff" dy=".3em" text-anchor="middle" font-size="40">Slide 1 – Project
+              Title</text>
+          </svg>
+          <div class="carousel-caption text-start">
+            <h1 class="display-6 fw-bold">Decarbonisation Pathways</h1>
+            <p>Placeholder text describing the first slide.</p>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <svg class="bd-placeholder-img d-block w-100" width="1200" height="500" xmlns="http://www.w3.org/2000/svg">
+            <rect width="100%" height="100%" fill="#198754"></rect>
+            <text x="50%" y="50%" fill="#fff" dy=".3em" text-anchor="middle" font-size="40">Slide 2 –
+              Sustainability</text>
+          </svg>
+          <div class="carousel-caption text-start">
+            <h1 class="display-6 fw-bold">Renewables Integration</h1>
+            <p>Placeholder text describing the second slide.</p>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <svg class="bd-placeholder-img d-block w-100" width="1200" height="500" xmlns="http://www.w3.org/2000/svg">
+            <rect width="100%" height="100%" fill="#0d6efd"></rect>
+            <text x="50%" y="50%" fill="#fff" dy=".3em" text-anchor="middle" font-size="40">Slide 3 – Inclusion</text>
+          </svg>
+          <div class="carousel-caption text-start">
+            <h1 class="display-6 fw-bold">Equity & Inclusion</h1>
+            <p>Placeholder text describing the third slide.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
     </div>
   </header>
 
-  <!-- Main Content -->
-  <main class="container py-5">
-    <p>Welcome to the knowledge hub. Browse reports, resources, and case studies to learn more.</p>
-  </main>
+  <!-- ABOUT KONEKSI + PROJECT -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <h2 class="h1 mb-3">KONEKSI – Australia-Indonesia Knowledge Partnership Platform</h2>
+          <p class="lead mb-3">Partnerships for inclusive and sustainable policies and technologies.</p>
+          <p>
+            KONEKSI supports equitable knowledge partnerships between Australian and Indonesian organisations,
+            leveraging local knowledge to address socio-economic challenges. It engages diverse stakeholders from
+            academia, government, civil society, and the private sector to co-design multidisciplinary solutions.
+          </p>
+          <a class="btn btn-primary" href="en/about.html">About the Project</a>
+        </div>
+        <div class="col-lg-6">
+          <div class="p-4 border rounded-3 bg-white h-100">
+            <h3 class="h4">Research Spotlight: DIBI</h3>
+            <p class="mb-2">The KONEKSI-funded DIBI project integrates routing & energy estimation, renewable energy,
+              and
+              ecosystem-based infrastructure planning to accelerate bus electrification in Indonesia.</p>
+            <!-- Fancy feature grid (replaces the <ul>) -->
+            <div class="row row-cols-1 row-cols-sm-2 g-3 mt-2">
+              <div class="col">
+                <div class="d-flex align-items-start gap-3 p-3 border rounded-3 h-100">
+                  <span class="icon-bubble text-primary">🌱</span>
+                  <div>
+                    <h4 class="h6 mb-1">Urban Transport & Equity</h4>
+                    <p class="mb-0 small text-muted">Addressing emissions while ensuring fair access.</p>
+                  </div>
+                </div>
+              </div>
 
-  <!-- Footer -->
-  <footer class="py-3 border-top">
-    <div class="container text-center small text-muted">
-      © 2025 DIBI Knowledge Platform
+              <div class="col">
+                <div class="d-flex align-items-start gap-3 p-3 border rounded-3 h-100">
+                  <span class="icon-bubble text-success">🏢</span>
+                  <div>
+                    <h4 class="h6 mb-1">Depot Energy & Comfort</h4>
+                    <p class="mb-0 small text-muted">Thermal and noise comfort with higher efficiency.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="d-flex align-items-start gap-3 p-3 border rounded-3 h-100">
+                  <span class="icon-bubble text-danger">💨</span>
+                  <div>
+                    <h4 class="h6 mb-1">Pollution Monitoring</h4>
+                    <p class="mb-0 small text-muted">PM, carbon, and nitrates tracked to reduce harm.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="d-flex align-items-start gap-3 p-3 border rounded-3 h-100">
+                  <span class="icon-bubble text-warning">🤝</span>
+                  <div>
+                    <h4 class="h6 mb-1">GEDSI Inclusion</h4>
+                    <p class="mb-0 small text-muted">Ensuring benefits for vulnerable groups.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </div>
-  </footer>
+  </section>
+
+  <!-- HIGHLIGHTS / PILLARS -->
+  <section class="highlights py-5">
+    <div class="container">
+      <h2 class="h1 mb-5 text-center">What this project delivers</h2>
+      <div class="row g-4 text-center">
+
+        <!-- Pillar 1 -->
+        <div class="col-md-4">
+          <div class="pillar-box p-4 h-100 shadow-sm rounded-4">
+            <div class="pillar-icon mb-3 text-primary">🏗️</div>
+            <h3 class="h5 mb-2">Sustainable Depot Planning</h3>
+            <p class="text-muted mb-0 small">
+              Frameworks for scalable, cost-effective electrification using Australian technology and global lessons.
+            </p>
+          </div>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="col-md-4">
+          <div class="pillar-box p-4 h-100 shadow-sm rounded-4">
+            <div class="pillar-icon mb-3 text-success">⚡</div>
+            <h3 class="h5 mb-2">Renewables Integration</h3>
+            <p class="text-muted mb-0 small">
+              Solar PV and battery energy storage integrated with charging systems and building efficiency.
+            </p>
+          </div>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="col-md-4">
+          <div class="pillar-box p-4 h-100 shadow-sm rounded-4">
+            <div class="pillar-icon mb-3 text-warning">🤝</div>
+            <h3 class="h5 mb-2">Equity-Led Outcomes (GEDSI)</h3>
+            <p class="text-muted mb-0 small">
+              Ensuring women, people with disabilities, and vulnerable groups benefit equally from electrification.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNER ORGANISATIONS (Logo Wall) -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="h1 mb-2 text-center">Partner Organisations</h2>
+      <p class="text-center text-muted mb-5">
+        Collaborative network across Australia and Indonesia advancing low-carbon, inclusive transport.
+      </p>
+
+      <div
+        class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-3 align-items-stretch justify-content-center">
+
+        <!-- University of Canberra -->
+        <div class="col">
+          <a class="logo-card" href="https://www.canberra.edu.au/" target="_blank" rel="noopener">
+            <div class="logo-frame">
+              <img src="../assets/images/university-of-canberra-seeklogo.png" alt="University of Canberra">
+            </div>
+          </a>
+        </div>
+
+        <!-- UNS -->
+        <div class="col">
+          <a class="logo-card" href="https://uns.ac.id/en/" target="_blank" rel="noopener">
+            <div class="logo-frame">
+              <img src="../assets/images/UNS logo.webp" alt="UNIVERSITAS SEBELAS MARET">
+            </div>
+          </a>
+        </div>
+
+        <!-- NEVCE -->
+        <div class="col">
+          <a class="logo-card" href="https://nevce.au/" target="_blank" rel="noopener">
+            <div class="logo-frame">
+              <img src="../assets/images/NEVCE logo.avif" alt="National Electric Vehicle Centre of Excellence">
+            </div>
+          </a>
+        </div>
+
+        <!-- Evenergi -->
+        <div class="col">
+          <a class="logo-card" href="https://evenergi.com/" target="_blank" rel="noopener">
+            <div class="logo-frame">
+              <img src="../assets/images/EVenergi-Logo.png" alt="Evenergi Pty Ltd">
+            </div>
+          </a>
+        </div>
+
+        <!-- ITP Renewables -->
+        <div class="col">
+          <a class="logo-card" href="https://itprenewables.com/" target="_blank" rel="noopener">
+            <div class="logo-frame">
+              <img src="../assets/images/ITP logo.png" alt="ITP Renewables (Australia) Pty Ltd">
+            </div>
+          </a>
+        </div>
+
+        <!-- BRIN -->
+        <div class="col">
+          <a class="logo-card" href="https://www.brin.go.id/en" target="_blank" rel="noopener">
+            <div class="logo-frame">
+              <img src="../assets/images/BRIN logo.png" alt="BRIN - National Research and Innovation Agency">
+            </div>
+          </a>
+        </div>
+
+        <!-- UMN -->
+        <div class="col">
+          <a class="logo-card" href="https://www.umn.ac.id/en/home" target="_blank" rel="noopener">
+            <div class="logo-frame">
+              <img src="../assets/images/UMN logo.webp" alt="Universitas Multimedia Nusantara">
+            </div>
+          </a>
+        </div>
+
+        <!-- ICENERGY -->
+        <div class="col">
+          <a class="logo-card" href="https://icenergyinstitute.com/" target="_blank" rel="noopener">
+            <div class="logo-frame">
+              <img src="../assets/images/Icenergy logo.png" alt="ICENERGY">
+            </div>
+          </a>
+        </div>
+
+        <!-- ICLEI -->
+        <div class="col">
+          <a class="logo-card" href="https://iclei-europe.org/" target="_blank" rel="noopener">
+            <div class="logo-frame">
+              <img src="../assets/images/ICLEI logo.png" alt="ICLEI – Local Governments for Sustainability">
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- INVESTIGATORS & TEAM -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="h1 mb-4 text-center">Investigators & Researchers</h2>
+
+      <!-- Investigators (top row with photo, name, title, org) -->
+      <div class="row g-4 justify-content-center mb-5">
+
+        <!-- Ahmed Imran -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="border-0 text-center p-4">
+            <div class="mx-auto mb-3 avatar-circle">
+              <img src="../assets/images/team/Ahmed_Imran.webp" alt="Assoc. Prof. Ahmed Imran"
+                onerror="this.src='../assets/images/team/avatar-placeholder.png'">
+            </div>
+            <h3 class="h5 mb-1 text-info">Assoc. Prof. Ahmed Imran</h3>
+            <p class="mb-1 text-muted small">Principal Investigator (Lead Researcher)</p>
+            <p class="mb-0 small">University of Canberra</p>
+          </div>
+        </div>
+
+        <!-- Toby Roxburgh -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="border-0 text-center p-4">
+            <div class="mx-auto mb-3 avatar-circle">
+              <img src="../assets/images/team/Toby_Roxburgh.jpeg" alt="Toby Roxburgh"
+                onerror="this.src='../assets/images/team/avatar-placeholder.png'">
+            </div>
+            <h3 class="h5 mb-1 text-info">Toby Roxburgh</h3>
+            <p class="mb-1 text-muted small">Investigator</p>
+            <p class="mb-0 small">National Electric Vehicle Centre of Excellence (NEVCE)</p>
+          </div>
+        </div>
+
+        <!-- Dr Idris F Sulaiman -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="border-0 text-center p-4">
+            <div class="mx-auto mb-3 avatar-circle">
+              <img src="../assets/images/team/Idris_F.jpeg" alt="Dr Idris F Sulaiman"
+                onerror="this.src='../assets/images/team/avatar-placeholder.png'">
+            </div>
+            <h3 class="h5 mb-1 text-info">Dr Idris F. Sulaiman</h3>
+            <p class="mb-1 text-muted small">Investigator</p>
+            <p class="mb-0 small">National Electric Vehicle Centre of Excellence (NEVCE)</p>
+          </div>
+        </div>
+
+        <!-- Emeritus Prof Robert N Fitzgerald -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="border-0 text-center p-4">
+            <div class="mx-auto mb-3 avatar-circle">
+              <img src="../assets/images/team/Robert_Fitz.jpeg" alt="Prof Robert N Fitzgerald"
+                onerror="this.src='../assets/images/team/avatar-placeholder.png'">
+            </div>
+            <h3 class="h5 mb-1 text-info">Emeritus Prof. Robert N. Fitzgerald</h3>
+            <p class="mb-1 text-muted small">Investigator</p>
+            <p class="mb-0 small">NEVCE & University of Canberra</p>
+          </div>
+        </div>
+
+        <!-- Prof Wahyudi Sutopo -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="border-0 text-center p-4">
+            <div class="mx-auto mb-3 avatar-circle">
+              <img src="../assets/images/team/Wahyudi_Sutopo.jpg" alt="Prof Wahyudi Sutopo"
+                onerror="this.src='../assets/images/team/avatar-placeholder.png'">
+            </div>
+            <h3 class="h5 mb-1 text-info">Prof. Wahyudi Sutopo</h3>
+            <p class="mb-1 text-muted small">Investigator</p>
+            <p class="mb-0 small">Universitas Sebelas Maret (UNS), Surakarta</p>
+          </div>
+        </div>
+
+        <!-- Dr Renny Rochani -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="border-0 text-center p-4">
+            <div class="mx-auto mb-3 avatar-circle">
+              <img src="../assets/images/team/Renny_Rochani.png" alt="Dr Renny Rochani"
+                onerror="this.src='../assets/images/team/avatar-placeholder.png'">
+            </div>
+            <h3 class="h5 mb-1 text-info">Dr Renny Rochani</h3>
+            <p class="mb-1 text-muted small">Investigator</p>
+            <p class="mb-0 small">Universitas Sebelas Maret (UNS), Surakarta</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Associated Researchers -->
+      <div class="section-researchers card border-0 shadow-sm">
+        <div class="card-body">
+          <h3 class="h5 mb-4">Associated Researchers</h3>
+
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
+
+            <!-- Dr Budi Yulianto -->
+            <div class="col">
+              <div class="researcher-tile h-100 p-3 bg-white border rounded-3">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="avatar-initial" data-initial="BY"></div>
+                  <div>
+                    <div class="fw-semibold">Dr Budi Yulianto</div>
+                    <div class="org-pill">Universitas Sebelas Maret</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dr Pringgo Widyo Laksono -->
+            <div class="col">
+              <div class="researcher-tile h-100 p-3 bg-white border rounded-3">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="avatar-initial" data-initial="PL"></div>
+                  <div>
+                    <div class="fw-semibold">Dr Pringgo Widyo Laksono</div>
+                    <div class="org-pill">Universitas Sebelas Maret</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dr Tech Sholihin As'ad -->
+            <div class="col">
+              <div class="researcher-tile h-100 p-3 bg-white border rounded-3">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="avatar-initial" data-initial="SA"></div>
+                  <div>
+                    <div class="fw-semibold">Dr Tech Sholihin As'ad</div>
+                    <div class="org-pill">Universitas Sebelas Maret</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dr Tech Rahmi Andarini -->
+            <div class="col">
+              <div class="researcher-tile h-100 p-3 bg-white border rounded-3">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="avatar-initial" data-initial="RA"></div>
+                  <div>
+                    <div class="fw-semibold">Dr Tech Rahmi Andarini</div>
+                    <div class="org-pill">UMN</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Mr Ilyas Taufiqurrohman -->
+            <div class="col">
+              <div class="researcher-tile h-100 p-3 bg-white border rounded-3">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="avatar-initial" data-initial="IT"></div>
+                  <div>
+                    <div class="fw-semibold">Mr Ilyas Taufiqurrohman</div>
+                    <div class="org-pill">ICLEI</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dr Rislima Sitompul -->
+            <div class="col">
+              <div class="researcher-tile h-100 p-3 bg-white border rounded-3">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="avatar-initial" data-initial="RS"></div>
+                  <div>
+                    <div class="fw-semibold">Dr Rislima Sitompul</div>
+                    <div class="org-pill">BRIN</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Mr Selamet Daroyni -->
+            <div class="col">
+              <div class="researcher-tile h-100 p-3 bg-white border rounded-3">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="avatar-initial" data-initial="SD"></div>
+                  <div>
+                    <div class="fw-semibold">Mr Selamet Daroyni</div>
+                    <div class="org-pill">ICLEI</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Ms Katelyn Purnell -->
+            <div class="col">
+              <div class="researcher-tile h-100 p-3 bg-white border rounded-3">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="avatar-initial" data-initial="KP"></div>
+                  <div>
+                    <div class="fw-semibold">Ms Katelyn Purnell</div>
+                    <div class="org-pill">EV Energi Pty Ltd</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dr Jose Zapata -->
+            <div class="col">
+              <div class="researcher-tile h-100 p-3 bg-white border rounded-3">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="avatar-initial" data-initial="JZ"></div>
+                  <div>
+                    <div class="fw-semibold">Dr Jose Zapata</div>
+                    <div class="org-pill">ITP Renewables Pty Ltd</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Farhan Shahriar -->
+            <div class="col">
+              <div class="researcher-tile h-100 p-3 bg-white border rounded-3">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="avatar-initial" data-initial="FS"></div>
+                  <div>
+                    <div class="fw-semibold">Farhan Shahriar</div>
+                    <div class="org-pill">University of Canberra</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- LOCATIONS & KEYWORDS (Upgraded) -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-4">
+        <h2 class="h1 mb-0">Research Locations & Keywords</h2>
+        <span class="badge rounded-pill bg-primary-subtle text-primary fw-semibold px-3 py-2">
+          Focus Areas · 2024–25
+        </span>
+      </div>
+
+      <div class="row g-4">
+        <!-- Left: Locations “map card” -->
+        <div class="col-lg-6">
+          <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+            <div class="card-body p-0">
+              <!-- Map / Illustration placeholder (replace with your SVG/IMG) -->
+              <div class="loc-hero d-flex align-items-end p-3 p-md-4">
+                <div class="text-white">
+                  <h3 class="h4 mb-1">Field & Collaboration Sites</h3>
+                  <p class="mb-0 small opacity-75">Indonesia · Australia</p>
+                </div>
+              </div>
+
+              <!-- Locations list with subtle dividers -->
+              <div class="p-3 p-md-4">
+                <ul class="list-unstyled m-0">
+                  <li class="loc-item d-flex align-items-center py-2">
+                    <span class="loc-dot bg-success-subtle me-3"></span>
+                    <div>
+                      <div class="fw-semibold">Surakarta, Jawa Tengah</div>
+                      <div class="text-muted small">Urban bus terminals · depot planning</div>
+                    </div>
+                  </li>
+                  <li class="loc-item d-flex align-items-center py-2">
+                    <span class="loc-dot bg-success-subtle me-3"></span>
+                    <div>
+                      <div class="fw-semibold">Jakarta</div>
+                      <div class="text-muted small">Policy, stakeholder engagement, air quality</div>
+                    </div>
+                  </li>
+                  <li class="loc-item d-flex align-items-center py-2">
+                    <span class="loc-dot bg-primary-subtle me-3"></span>
+                    <div>
+                      <div class="fw-semibold">Australian Capital Territory</div>
+                      <div class="text-muted small">Modelling, analytics, partnerships</div>
+                    </div>
+                  </li>
+                  <li class="loc-item d-flex align-items-center py-2">
+                    <span class="loc-dot bg-primary-subtle me-3"></span>
+                    <div>
+                      <div class="fw-semibold">Sydney, NSW</div>
+                      <div class="text-muted small">Industry collaboration & validation</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Keyword “cloud” with category accents -->
+        <div class="col-lg-6">
+          <div class="card border-0 shadow-sm rounded-4 h-100">
+            <div class="card-body p-3 p-md-4">
+              <h3 class="h5 mb-3">Keywords & Themes</h3>
+
+              <!-- Legend -->
+              <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
+                <span class="legend-dot bg-theme-energy"></span><span class="legend-text">Energy</span>
+                <span class="legend-dot bg-theme-ops ms-3"></span><span class="legend-text">Operations</span>
+                <span class="legend-dot bg-theme-built ms-3"></span><span class="legend-text">Built Environment</span>
+                <span class="legend-dot bg-theme-equity ms-3"></span><span class="legend-text">Equity</span>
+              </div>
+
+              <!-- Chips -->
+              <div class="kw-cloud d-flex flex-wrap gap-2">
+                <!-- Energy -->
+                <div class="energy">
+                  <span class="kw-chip theme-energy">Solar PV</span>
+                  <span class="kw-chip theme-energy">Battery energy storage</span>
+                  <span class="kw-chip theme-energy">Waste-to-energy</span>
+                </div>
+
+                <!-- Operations -->
+                <div class="operations">
+                  <span class="kw-chip theme-ops">Electric bus route simulation</span>
+                  <span class="kw-chip theme-ops">Depot charging management</span>
+                </div>
+
+                <!-- Built environment -->
+                <div class="built-environment">
+                  <span class="kw-chip theme-built">Building energy efficiency</span>
+                  <span class="kw-chip theme-built">Thermal & noise comfort</span>
+                  <span class="kw-chip theme-built">Air quality monitoring (PM, carbon, nitrates)</span>
+                </div>
+
+                <!-- Equity -->
+                <div class="equity">
+                  <span class="kw-chip theme-equity">GEDSI</span>
+                  <span class="kw-chip theme-equity">Inclusive design</span>
+                </div>
+              </div>
+
+              <!-- Optional CTA -->
+              <div class="mt-4">
+                <a href="en/knowledge-hub.html" class="btn btn-outline-primary btn-sm">Explore the Knowledge Hub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- RESEARCH UPDATES -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-4">
+        <h2 class="h1 mb-0">Research Updates</h2>
+        <a href="en/knowledge-hub.html" class="btn btn-outline-primary btn-sm">View all outputs</a>
+      </div>
+
+      <div class="row g-4">
+        <!-- Latest Outputs -->
+        <div class="col-lg-7">
+          <div class="card border-0 shadow-sm rounded-4 h-100">
+            <div class="card-body p-3 p-md-4">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <h3 class="h5 mb-0">Latest Outputs</h3>
+                <span class="badge rounded-pill bg-primary-subtle text-primary fw-semibold">Peer & Tech Reports</span>
+              </div>
+
+              <div class="doc-list">
+                <!-- Doc item -->
+                <a class="doc-item" href="assets/docs/depot-efficiency.pdf">
+                  <div class="doc-icon">PDF</div>
+                  <div class="doc-meta">
+                    <div class="doc-title">Depot Energy Efficiency Report</div>
+                    <div class="doc-sub text-muted">
+                      Updated <time datetime="2025-09-01">Sep 1, 2025</time> · 1.2 MB
+                    </div>
+                  </div>
+                  <span class="doc-cta">Download</span>
+                </a>
+
+                <a class="doc-item" href="assets/docs/air-quality-baseline.pdf">
+                  <div class="doc-icon">PDF</div>
+                  <div class="doc-meta">
+                    <div class="doc-title">Air Quality Baseline</div>
+                    <div class="doc-sub text-muted">
+                      Updated <time datetime="2025-08-18">Aug 18, 2025</time> · 980 KB
+                    </div>
+                  </div>
+                  <span class="doc-cta">Download</span>
+                </a>
+
+                <a class="doc-item" href="assets/docs/renewable-integration.pdf">
+                  <div class="doc-icon">PDF</div>
+                  <div class="doc-meta">
+                    <div class="doc-title">Renewable Integration Case Study</div>
+                    <div class="doc-sub text-muted">
+                      Updated <time datetime="2025-08-02">Aug 2, 2025</time> · 1.6 MB
+                    </div>
+                  </div>
+                  <span class="doc-cta">Download</span>
+                </a>
+              </div>
+
+              <p class="small text-muted mt-3 mb-0">Replace links and dates with your real documents as they’re
+                published.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- News & Events -->
+        <div class="col-lg-5">
+          <div class="card border-0 shadow-sm rounded-4 h-100">
+            <div class="card-body p-3 p-md-4">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <h3 class="h5 mb-0">News & Events</h3>
+                <span class="badge rounded-pill bg-success-subtle text-success fw-semibold">Upcoming</span>
+              </div>
+
+              <ul class="timeline list-unstyled m-0">
+                <li class="timeline-item">
+                  <div class="t-dot bg-success"></div>
+                  <div class="t-meta">
+                    <div class="fw-semibold">Stakeholder Workshop (Jakarta)</div>
+                    <div class="text-muted small">Date TBC · Policy & operator engagement</div>
+                  </div>
+                </li>
+
+                <li class="timeline-item">
+                  <div class="t-dot bg-primary"></div>
+                  <div class="t-meta">
+                    <div class="fw-semibold">Partner Seminar (UNS & UMN)</div>
+                    <div class="text-muted small">Q4 2025 (tentative) · Findings & case studies</div>
+                  </div>
+                </li>
+
+                <li class="timeline-item">
+                  <div class="t-dot bg-warning"></div>
+                  <div class="t-meta">
+                    <div class="fw-semibold">DIBI Project Brief – v1.0</div>
+                    <div class="text-muted small">Published Jul 2025 · Overview & objectives</div>
+                  </div>
+                </li>
+              </ul>
+
+              <div class="mt-4">
+                <a href="en/news.html" class="btn btn-outline-secondary btn-sm">All news</a>
+                <a href="en/events.html" class="btn btn-outline-secondary btn-sm ms-2">All events</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- /row -->
+    </div>
+  </section>
+
+
+  <!-- CTA -->
+  <section class="py-5 bg-primary text-white">
+    <div class="container">
+      <div class="row align-items-center g-3">
+        <div class="col-lg-8">
+          <h2 class="h1 mb-2">Work with us</h2>
+          <p class="lead mb-0">Policy makers, operators, researchers, and communities — join the transition to
+            inclusive, low-carbon public transport.</p>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <a class="btn btn-light btn-lg" href="en/contact.html">Contact the team</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (injected) -->
+  <div id="footer"></div>
+
+  <!-- Bootstrap JS + Include script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <script src="../assets/js/include.js"></script>
 </body>
+
 </html>

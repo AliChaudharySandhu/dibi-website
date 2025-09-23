@@ -1,59 +1,95 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>About – DIBI Knowledge Platform</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/styles.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About | DIBI</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <script src="../assets/js/include.js"></script>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg bg-light border-bottom">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="./index.html">DIBI Platform</a>
-    <ul class="navbar-nav">
-      <li class="nav-item"><a class="nav-link active" href="./about.html">About</a></li>
-      <li class="nav-item"><a class="nav-link" href="./knowledge-hub.html">Knowledge Hub</a></li>
-      <li class="nav-item"><a class="nav-link" href="./gedsi.html">GEDSI</a></li>
-      <li class="nav-item"><a class="nav-link" href="./resources.html">Resources</a></li>
-      <li class="nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
-    </ul>
-    <div class="ms-auto d-flex gap-2">
-      <a class="btn btn-outline-secondary btn-sm" href="../id/about.html">Bahasa Indonesia</a>
-      <a class="btn btn-dark btn-sm" href="./about.html">English</a>
+  <!-- Navbar (injected) -->
+  <div id="navbar"></div>
+
+  <main class="py-5">
+    <div class="container">
+      <header class="mb-4">
+        <h1 class="display-5 fw-semibold">About the DIBI Project</h1>
+        <p class="lead text-muted mb-0">Decarbonisation Pathways for Indonesia’s Buses Infrastructure</p>
+      </header>
+
+      <section class="row g-4">
+        <div class="col-lg-7">
+          <div class="p-4 bg-white border rounded-4 h-100">
+            <h2 class="h4">Overview</h2>
+            <p>
+              DIBI is a KONEKSI-supported initiative co-designed by Australian and Indonesian partners to help cities
+              plan and scale electric bus adoption. The project blends routing and energy estimation, renewable energy
+              integration, and ecosystem-based planning with a strong emphasis on social inclusion (GEDSI).
+            </p>
+            <h3 class="h5 mt-4">Objectives</h3>
+            <ul class="mb-0">
+              <li>Develop practical pathways for bus fleet electrification and depot readiness.</li>
+              <li>Assess energy efficiency, thermal/noise comfort, and pollution reduction at depots.</li>
+              <li>Integrate solar PV and battery storage within charging strategies.</li>
+              <li>Evaluate community impact using GEDSI criteria to ensure equitable outcomes.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="p-4 bg-white border rounded-4 h-100">
+            <h2 class="h5">Who we work with</h2>
+            <p class="mb-3">A collaboration across government, academia, industry, and civil society.</p>
+            <ul class="list-unstyled mb-4">
+              <li class="mb-2">• Indonesian transport authorities (e.g., Surakarta)</li>
+              <li class="mb-2">• Universities (UNS, UMN, UC)</li>
+              <li class="mb-2">• Industry partners (NEVCE, EV Energi, ITP Renewables)</li>
+              <li class="mb-2">• Research and NGOs (ICE, ICLEI, BRIN)</li>
+            </ul>
+            <div class="alert alert-primary mb-0">
+              <strong>Scope:</strong> This public website shares project context, updates, and
+              outputs to support knowledge exchange and policy dialogue.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt-5">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="p-4 bg-white border rounded-4 h-100">
+              <h3 class="h6 text-uppercase text-muted">Timeframe</h3>
+              <p class="mb-0">2024–2025 (Pilot and dissemination)</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-4 bg-white border rounded-4 h-100">
+              <h3 class="h6 text-uppercase text-muted">Locations</h3>
+              <p class="mb-0">Surakarta, Jakarta, ACT & Sydney</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-4 bg-white border rounded-4 h-100">
+              <h3 class="h6 text-uppercase text-muted">Focus Areas</h3>
+              <p class="mb-0">Energy planning, renewables, air quality, GEDSI</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
-  </div>
-</nav>
+  </main>
 
-<header class="py-5 bg-light border-bottom">
-  <div class="container">
-    <h1 class="display-6 fw-bold">About the Project</h1>
-    <p class="lead mb-0">Decarbonisation Pathways for Indonesia’s Buses Infrastructure (DIBI).</p>
-  </div>
-</header>
-
-<main class="container py-5">
-  <section class="mb-4">
-    <h2 class="h4">Overview</h2>
-    <p>This site shares research, case studies, and inclusive practices to support bus electrification in Indonesia.</p>
-  </section>
-  <section class="mb-4">
-    <h2 class="h4">Objectives</h2>
-    <ul>
-      <li>Provide a bilingual knowledge hub (English & Indonesian).</li>
-      <li>Highlight energy, air quality, and depot planning insights.</li>
-      <li>Emphasize GEDSI (Gender Equality, Disability, Social Inclusion).</li>
-    </ul>
-  </section>
-  <section>
-    <h2 class="h4">Partners & Audience</h2>
-    <p>Built for transport planners, researchers, government agencies, and the wider community.</p>
-  </section>
-</main>
-
-<footer class="py-4 border-top">
-  <div class="container small text-muted text-center">© 2025 DIBI Knowledge Platform</div>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Footer (injected) -->
+  <div id="footer"></div>
+  <!-- Bootstrap JS + Include script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <script src="../assets/js/include.js"></script>
 </body>
 </html>
