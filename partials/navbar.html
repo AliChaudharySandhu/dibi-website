@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-black shadow-sm">
     <div class="container">
       <!-- Logo + Brand -->
-      <a class="navbar-brand fw-semibold d-flex align-items-center gap-2 fs-2" href="../index.html">
-        <img src="../assets/images/Logo.png" alt="DIBI" width="ms-auto" height="ms-auto" class="d-inline-block">
+      <a class="navbar-brand fw-semibold d-flex align-items-center gap-2 fs-2" href="index.html">
+        <img src="assets/images/Logo.png" alt="DIBI" width="ms-auto" height="ms-auto" class="d-inline-block">
         Platform
       </a>
   
@@ -16,30 +16,31 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="../en/about.html">About</a>
+            <a class="nav-link" href="en/about.html" data-i18n="nav.about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../en/knowledge-hub.html">Knowledge Hub</a>
+            <a class="nav-link" href="en/knowledge-hub.html" data-i18n="nav.knowledge">Knowledge Hub</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../en/gedsi.html">GEDSI</a>
+            <a class="nav-link" href="en/gedsi.html" data-i18n="nav.gedsi">GEDSI</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../en/resources.html">Resources</a>
+            <a class="nav-link" href="en/resources.html" data-i18n="nav.resources">Resources</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../en/contact.html">Contact</a>
+            <a class="nav-link" href="en/contact.html" data-i18n="nav.contact">Contact</a>
           </li>
   
           <!-- Language Dropdown -->
+           <!-- <div id="google_translate_element"></div> -->
           <li class="nav-item dropdown ms-lg-3">
             <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button"
-               data-bs-toggle="dropdown" aria-expanded="false">
+               data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav.language">
               Language
             </a>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
-              <li><a class="dropdown-item active" href="../index.html">English</a></li>
-              <li><a class="dropdown-item" href="../ind/index.html">Bahasa Indonesia</a></li>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown" id="lang-select">
+              <li><a class="dropdown-item active" href="index.html" value="en" data-lang="en">English</a></li>
+              <li><a class="dropdown-item" href="id/index.html" value="id" data-lang="id">Bahasa Indonesia</a></li>
             </ul>
           </li>
         </ul>

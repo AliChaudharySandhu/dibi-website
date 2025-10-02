@@ -1,17 +1,21 @@
 <!doctype html>
 <html lang="en">
+
 <head>
+  <!-- Base path so all relative links work on GitHub Pages -->
+  <base href="/dibi-website/">
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>GEDSI | DIBI</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <link rel="stylesheet" href="../assets/css/styles.css" />
-  <script src="../assets/js/include.js"></script>
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
+
 <body>
-  <div id="navbar"></div>
+  <div id="navbar" data-include="navbar"></div>
 
   <main class="py-5">
     <div class="container">
@@ -61,12 +65,13 @@
     </div>
   </main>
 
-  <div id="footer"></div>
+  <div id="footer" data-include="footer"></div>
 
   <!-- Bootstrap JS + Include script -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
-  <script src="../assets/js/include.js"></script>
+  <script src="assets/js/include.js"></script>
 </body>
+
 </html>
