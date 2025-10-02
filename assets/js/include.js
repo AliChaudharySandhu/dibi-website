@@ -1,33 +1,6 @@
-function includeHTML(id, file) {
-    fetch(file)
-      .then(response => {
-        if (!response.ok) throw new Error("Network error");
-        return response.text();
-      })
-      .then(data => {
-        document.getElementById(id).innerHTML = data;
-      })
-      .catch(error => {
-        console.error("Error loading include:", file, error);
-      });
-  }
-  
-  // Call this after DOM loads
-  document.addEventListener("DOMContentLoaded", () => {
-    // Navbar
-    if (document.getElementById("navbar")) {
-      includeHTML("navbar", "partials/navbar.html");
-    }
-    // Footer
-    if (document.getElementById("footer")) {
-      includeHTML("footer", "partials/footer.html");
-    }
-  });
+// ------ i18n + partials helpers ------
 
-
-// ------ Nav and Footer Partials Language Translator Helpers -------------//
-
-// --- Detect locale robustly (works for /id/... and /Dibi-Website/id/...)
+// Detect locale first (module scope)
 function detectLocale() {
   const q = (new URLSearchParams(location.search).get('lang') || '').toLowerCase();
   if (q === 'en' || q === 'id') return q;
@@ -45,88 +18,98 @@ function detectLocale() {
   const nav = (navigator.language || 'en').toLowerCase();
   return nav.startsWith('id') ? 'id' : 'en';
 }
+const locale = detectLocale();         // <- defined BEFORE anything uses it
+document.documentElement.lang = locale;
 
-// --- Load dictionary
-async function loadI18n(locale) {
-  const url = 'assets/i18n/' + locale + '.json'; // resolved by <base> if present
+async function loadI18n(loc) {
+  const url = 'assets/i18n/' + loc + '.json';
   const res = await fetch(url, { cache: 'no-store' });
   return res.json();
 }
-
-// --- Apply i18n text to a DOM subtree
 function applyI18n(root, dict) {
   root.querySelectorAll('[data-i18n]').forEach(node => {
     const key = node.getAttribute('data-i18n');
     if (dict[key] != null) node.textContent = dict[key];
   });
 }
-
-// --- Rewrite locale in internal links inside a subtree
-function rewriteLocaleLinks(root, locale) {
+function rewriteLocaleLinks(root, loc) {
   root.querySelectorAll('a[href]').forEach(a => {
     const href = a.getAttribute('href');
     if (!href || href.startsWith('#') || /^https?:\/\//i.test(href)) return;
-    // Replace leading en/ or id/ (with or without starting slash)
-    a.setAttribute('href', href.replace(/^\/?(en|id)\//, locale + '/'));
+    if (href === '/' || href === './' || href === '') {
+      a.setAttribute('href', `${loc}/index.html`);
+      return;
+    }
+    a.setAttribute('href', href.replace(/^\/?(en|id)\//, `${loc}/`));
   });
 }
 
-// --- Include partial(s)
-async function includePartials(locale, dict) {
-  console.log(locale, dict, 'varrrr')
-  const slots = document.querySelectorAll('[data-include]');
-  await Promise.all([...slots].map(async el => {
-    const name = el.getAttribute('data-include'); // "navbar", "footer", etc.
-    const url  = 'partials/' + name + '.html';    // resolved by <base>
-    const html = await fetch(url, { cache: 'no-store' }).then(r => r.text());
-    el.innerHTML = html;
+// Ensure the navbar logo (brand) link always points to the correct locale homepage
+// Example: if locale = 'id', logo will link to /id/index.html instead of default /en/index.html
+function setNavLocale(loc){
+  const brand = document.querySelector('.navbar-brand');
+  if (brand) brand.setAttribute('href', `${loc}/index.html`);
+}
 
-    applyI18n(el, dict);
-    rewriteLocaleLinks(el, locale);
+// Async include that also applies i18n, rewrites links, and fixes the logo when navbar loads
+async function includeHTML(id, file, loc, dict) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const res = await fetch(file);
+  if (!res.ok) throw new Error('Network error');
+  const html = await res.text();
+  el.innerHTML = html;
 
-    // Wire language dropdown in this partial (if present)
+  if (dict) applyI18n(el, dict);
+  rewriteLocaleLinks(el, loc);
+
+  if (file.includes('navbar')) {
+    setNavLocale(loc); // now the navbar exists in the DOM
+    // wire language dropdown if present
     el.querySelectorAll('.dropdown-item[data-lang]').forEach(item => {
       item.addEventListener('click', (e) => {
         e.preventDefault();
         setLocale(item.dataset.lang);
       });
     });
-  }));
+  }
 }
 
-// --- Change locale (navigate to /en/ or /id/ if present)
-async function setLocale(locale) {
-  if (locale !== 'en' && locale !== 'id') return;
-  localStorage.setItem('locale', locale);
-  document.documentElement.lang = locale;
+// Change locale (folder-based navigation preferred)
+async function setLocale(loc) {
+  if (loc !== 'en' && loc !== 'id') return;
+  localStorage.setItem('locale', loc);
+  document.documentElement.lang = loc;
 
   const segs = location.pathname.split('/').filter(Boolean);
   const i = segs.findIndex(s => /^(en|id)$/i.test(s));
-
-  // If URL already has /en/ or /id/, replace it and navigate
   if (i >= 0) {
-    segs[i] = locale;
-    const newPath = '/' + segs.join('/') + location.search + location.hash;
-    if (newPath !== location.pathname) {
-      location.assign(newPath);
-      return;
-    }
+    segs[i] = loc;
+  } else {
+    if (segs.length && !/\.html?$/.test(segs[0])) segs.splice(1, 0, loc);
+    else segs.unshift(loc);
   }
-
-  // Otherwise just re-apply i18n in-place
-  const dict = await loadI18n(locale);
+  const newPath = '/' + segs.join('/') + location.search + location.hash;
+  if (newPath !== location.pathname) {
+    location.assign(newPath);
+    return;
+  }
+  // If we didn't navigate, re-apply i18n in place
+  const dict = await loadI18n(loc);
   applyI18n(document.body, dict);
-  rewriteLocaleLinks(document, locale);
+  rewriteLocaleLinks(document, loc);
+  setNavLocale(loc);
 }
 
-// --- Boot
-(async function () {
-  const locale = detectLocale();
-  document.documentElement.lang = locale;
+// Boot after DOM is parsed
+document.addEventListener('DOMContentLoaded', async () => {
   const dict = await loadI18n(locale);
 
-  // Include and translate navbar/footer (or any [data-include])
-  await includePartials(locale, dict);
-})();
+  // Inject navbar & footer, then i18n + link rewrites happen inside includeHTML
+  await includeHTML('navbar', 'partials/navbar.html', locale, dict);
+  await includeHTML('footer', 'partials/footer.html', locale, dict);
 
-// --------------------------- Partials Helper End ------------------//
+  // If your page body (outside partials) also has data-i18n keys:
+  applyI18n(document.body, dict);
+  rewriteLocaleLinks(document, locale);
+});
