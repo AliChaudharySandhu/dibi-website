@@ -25,76 +25,76 @@
           <p class="text-muted mb-0">Reports, briefs, and case studies from the project.</p>
         </div>
         <form class="d-flex" role="search" onsubmit="return false;">
-          <input class="form-control" type="search" placeholder="Search outputs…" aria-label="Search">
+          <input id="knowledge-search" class="form-control" type="search" placeholder="Search outputs…"
+            aria-label="Search">
         </form>
-      </header>
 
-      <!-- Filters -->
-      <div class="d-flex flex-wrap gap-2 mb-4">
-        <button class="btn btn-sm btn-outline-primary active">All</button>
-        <button class="btn btn-sm btn-outline-primary">Reports</button>
-        <button class="btn btn-sm btn-outline-primary">Case Studies</button>
-        <button class="btn btn-sm btn-outline-primary">Briefs</button>
-        <button class="btn btn-sm btn-outline-primary">Slides</button>
-      </div>
-
-      <!-- Outputs grid -->
-      <div class="row g-4">
-        <!-- Card -->
-        <div class="col-md-6 col-lg-4">
-          <a class="text-decoration-none" href="assets/docs/depot-efficiency.pdf">
-            <div class="card h-100 border-0 shadow-sm rounded-4">
-              <div class="card-body">
-                <span class="badge bg-primary-subtle text-primary mb-2">Report</span>
-                <h2 class="h5">Depot Energy Efficiency</h2>
-                <p class="text-muted small mb-3">Baseline assessment of energy use, thermal comfort, and noise in a
-                  major bus terminal.</p>
-                <div class="d-flex justify-content-between small text-muted">
-                  <span>Updated Aug 2025</span>
-                  <span>PDF · 1.2 MB</span>
-                </div>
-              </div>
-            </div>
-          </a>
+        <!-- Filters -->
+        <div class="d-flex flex-wrap gap-2 mb-4" id="filters">
+          <button class="btn btn-sm btn-outline-primary active" data-filter="all">All</button>
+          <button class="btn btn-sm btn-outline-primary" data-filter="report">Reports</button>
+          <button class="btn btn-sm btn-outline-primary" data-filter="case study">Case Studies</button>
+          <button class="btn btn-sm btn-outline-primary" data-filter="brief">Briefs</button>
+          <button class="btn btn-sm btn-outline-primary" data-filter="slides">Slides</button>
         </div>
 
-        <div class="col-md-6 col-lg-4">
-          <a class="text-decoration-none" href="assets/docs/air-quality-baseline.pdf">
-            <div class="card h-100 border-0 shadow-sm rounded-4">
-              <div class="card-body">
-                <span class="badge bg-primary-subtle text-primary mb-2">Report</span>
-                <h2 class="h5">Air Quality Baseline</h2>
-                <p class="text-muted small mb-3">Monitoring PM, carbon, and nitrates to inform operations and policy.
-                </p>
-                <div class="d-flex justify-content-between small text-muted">
-                  <span>Updated Aug 2025</span>
-                  <span>PDF · 980 KB</span>
+        <!-- Outputs grid -->
+        <div class="row g-4">
+          <!-- Card -->
+          <div class="col-md-6 col-lg-4">
+            <a class="text-decoration-none" href="assets/docs/depot-efficiency.pdf">
+              <div class="card h-100 border-0 shadow-sm rounded-4">
+                <div class="card-body">
+                  <span class="badge bg-primary-subtle text-primary mb-2">Report</span>
+                  <h2 class="h5">Depot Energy Efficiency</h2>
+                  <p class="text-muted small mb-3">Baseline assessment of energy use, thermal comfort, and noise in a
+                    major bus terminal.</p>
+                  <div class="d-flex justify-content-between small text-muted">
+                    <span>Updated Aug 2025</span>
+                    <span>PDF · 1.2 MB</span>
+                  </div>
                 </div>
               </div>
-            </div>
-          </a>
-        </div>
+            </a>
+          </div>
 
-        <div class="col-md-6 col-lg-4">
-          <a class="text-decoration-none" href="assets/docs/renewable-integration.pdf">
-            <div class="card h-100 border-0 shadow-sm rounded-4">
-              <div class="card-body">
-                <span class="badge bg-success-subtle text-success mb-2">Case Study</span>
-                <h2 class="h5">Renewable Integration</h2>
-                <p class="text-muted small mb-3">Solar PV and BESS options for depot charging strategies.</p>
-                <div class="d-flex justify-content-between small text-muted">
-                  <span>Updated Jul 2025</span>
-                  <span>PDF · 1.6 MB</span>
+          <div class="col-md-6 col-lg-4">
+            <a class="text-decoration-none" href="assets/docs/air-quality-baseline.pdf">
+              <div class="card h-100 border-0 shadow-sm rounded-4">
+                <div class="card-body">
+                  <span class="badge bg-primary-subtle text-primary mb-2">Report</span>
+                  <h2 class="h5">Air Quality Baseline</h2>
+                  <p class="text-muted small mb-3">Monitoring PM, carbon, and nitrates to inform operations and policy.
+                  </p>
+                  <div class="d-flex justify-content-between small text-muted">
+                    <span>Updated Aug 2025</span>
+                    <span>PDF · 980 KB</span>
+                  </div>
                 </div>
               </div>
-            </div>
-          </a>
-        </div>
-      </div>
+            </a>
+          </div>
 
-      <div class="text-center mt-4">
-        <a class="btn btn-outline-secondary btn-sm" href="#">Load more</a>
-      </div>
+          <div class="col-md-6 col-lg-4">
+            <a class="text-decoration-none" href="assets/docs/renewable-integration.pdf">
+              <div class="card h-100 border-0 shadow-sm rounded-4">
+                <div class="card-body">
+                  <span class="badge bg-success-subtle text-success mb-2">Case Study</span>
+                  <h2 class="h5">Renewable Integration</h2>
+                  <p class="text-muted small mb-3">Solar PV and BESS options for depot charging strategies.</p>
+                  <div class="d-flex justify-content-between small text-muted">
+                    <span>Updated Jul 2025</span>
+                    <span>PDF · 1.6 MB</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="text-center mt-4">
+          <a class="btn btn-outline-secondary btn-sm" href="#">Load more</a>
+        </div>
     </div>
   </main>
 
@@ -105,6 +105,7 @@
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
   <script src="assets/js/include.js"></script>
+  <script src="assets/js/search.js"></script>
 </body>
 
 </html>
