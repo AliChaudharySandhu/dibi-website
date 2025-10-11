@@ -27,23 +27,23 @@
       <section class="row g-4">
         <div class="col-lg-7">
           <div class="p-4 bg-white border rounded-4 h-100">
-            <form action="#" method="post">
+            <form action="mailto:info@dibi.example" method="GET" enctype="text/plain">
               <div class="row g-3">
                 <div class="col-md-6">
                   <label class="form-label">Full name</label>
-                  <input type="text" class="form-control" placeholder="Your name">
+                  <input type="text" class="form-control" name="name" placeholder="Your name" required>
                 </div>
                 <div class="col-md-6">
                   <label class="form-label">Email</label>
-                  <input type="email" class="form-control" placeholder="name@org.com">
+                  <input type="email" class="form-control" name="email" placeholder="name@org.com" required>
                 </div>
                 <div class="col-md-6">
                   <label class="form-label">Organisation</label>
-                  <input type="text" class="form-control" placeholder="e.g., City Gov / University">
+                  <input type="text" class="form-control" name="organisation" placeholder="e.g., City Gov / University">
                 </div>
                 <div class="col-md-6">
                   <label class="form-label">Topic</label>
-                  <select class="form-select">
+                  <select class="form-select" name="topic">
                     <option>General enquiry</option>
                     <option>Partnerships</option>
                     <option>Media</option>
@@ -52,15 +52,19 @@
                 </div>
                 <div class="col-12">
                   <label class="form-label">Message</label>
-                  <textarea class="form-control" rows="5" placeholder="How can we help?"></textarea>
+                  <textarea class="form-control" name="message" rows="5" placeholder="How can we help?"
+                    required></textarea>
                 </div>
                 <div class="col-12">
-                  <button class="btn btn-primary">Send message</button>
+                  <button type="submit" class="btn btn-primary">Send message</button>
                 </div>
               </div>
             </form>
-            <p class="small text-muted mt-3 mb-0">*Form is a visual placeholder. Hook to your email or backend when
-              ready.</p>
+
+            <p class="small text-muted mt-3 mb-0">
+              *This form opens your default email app to send a message directly to the DIBI team.
+            </p>
+
           </div>
         </div>
 

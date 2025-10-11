@@ -27,39 +27,45 @@
       <section class="row g-4">
         <div class="col-lg-7">
           <div class="p-4 bg-white border rounded-4 h-100">
-            <form action="#" method="post">
+            <form action="mailto:info@dibi.example" method="GET" enctype="text/plain">
               <div class="row g-3">
                 <div class="col-md-6">
                   <label class="form-label">Nama lengkap</label>
-                  <input type="text" class="form-control" placeholder="Nama Anda">
+                  <input type="text" class="form-control" name="name" placeholder="Nama Anda" required>
                 </div>
                 <div class="col-md-6">
                   <label class="form-label">Email</label>
-                  <input type="email" class="form-control" placeholder="nama@org.com">
+                  <input type="email" class="form-control" name="email" placeholder="nama@organisasi.com" required>
                 </div>
                 <div class="col-md-6">
                   <label class="form-label">Organisasi</label>
-                  <input type="text" class="form-control" placeholder="contoh: Pemerintah Kota / Universitas">
+                  <input type="text" class="form-control" name="organisation"
+                    placeholder="misal: Pemerintah Kota / Universitas">
                 </div>
                 <div class="col-md-6">
                   <label class="form-label">Topik</label>
-                  <select class="form-select">
+                  <select class="form-select" name="topic">
                     <option>Pertanyaan umum</option>
                     <option>Kemitraan</option>
                     <option>Media</option>
-                    <option>Akses ke keluaran</option>
+                    <option>Akses ke keluaran proyek</option>
                   </select>
                 </div>
                 <div class="col-12">
                   <label class="form-label">Pesan</label>
-                  <textarea class="form-control" rows="5" placeholder="Bagaimana kami bisa membantu?"></textarea>
+                  <textarea class="form-control" name="message" rows="5" placeholder="Bagaimana kami dapat membantu?"
+                    required></textarea>
                 </div>
                 <div class="col-12">
-                  <button class="btn btn-primary">Kirim pesan</button>
+                  <button type="submit" class="btn btn-primary">Kirim pesan</button>
                 </div>
               </div>
             </form>
-            <p class="small text-muted mt-3 mb-0">*Formulir ini hanya contoh visual. Sambungkan dengan email atau backend Anda saat siap.</p>
+
+            <p class="small text-muted mt-3 mb-0">
+              *Formulir ini akan membuka aplikasi email default Anda untuk mengirim pesan langsung ke tim DIBI.
+            </p>
+
           </div>
         </div>
 
