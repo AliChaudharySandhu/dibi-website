@@ -1,12 +1,18 @@
 {
     "dibi": "Jalur Dekarbonisasi untuk Infrastruktur Bus di Indonesia",
     "nav.brand": "DIBI",
+    "nav.projects": "Proyek",
     "nav.about": "Tentang",
+    "nav.about_dibi1": "DIBI I",
+    "nav.about_dibi2": "DIBI II",
     "nav.knowledge": "Pusat Pengetahuan",
+    "nav.events": "Kegiatan",
+    "nav.media": "Siaran Pers",
+    "nav.gallery": "Galeri",
     "nav.contact": "Kontak",
     "nav.language": "Bahasa",
-    "nav.projects": "Proyek",
-    "footer.resources": "Sumber Daya",
+    "lang.english": "Inggris",
+    "lang.indonesian": "Bahasa Indonesia",
     "footer.copyright": "© 2025 Platform Pengetahuan DIBI",
     "footer.contact": "Kontak"
 }

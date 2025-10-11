@@ -26,33 +26,39 @@ main {
   padding-top: 6px;
   padding-bottom: 6px;
 }
-.topbar .dibi-text{
+
+.topbar .dibi-text {
   font-size: 12px;
 }
 
 .topbar a.topbar-link {
   color: var(--dibi-text-on-dark);
-  font-size: 1.1rem;          /* icon sizing */
+  font-size: 1.1rem;
+  /* icon sizing */
   line-height: 1;
   display: inline-flex;
   align-items: center;
   transition: color .2s ease-in-out, transform .15s ease-in-out;
 }
+
 .topbar a.topbar-link:hover,
 .topbar a.topbar-link:focus {
-  color: var(--dibi-info);     /* subtle hover */
+  color: var(--dibi-info);
+  /* subtle hover */
   transform: translateY(-1px);
 }
 
 /* Mobile topbar inside collapse */
 .topbar-mobile {
-  border-top: 1px solid rgba(0,0,0,.06);
+  border-top: 1px solid rgba(0, 0, 0, .06);
   margin-top: .25rem;
   padding-top: .25rem;
 }
+
 .topbar-mobile .topbar-link {
   color: var(--dibi-primary);
 }
+
 .topbar-mobile .topbar-link:hover {
   color: var(--dibi-link-hover);
 }
@@ -67,9 +73,12 @@ main {
 
 /* Navbar base */
 .navbar {
-  background-color: var(--dibi-white) !important;     /* white base */
-  color: var(--dibi-black) !important;                /* default text */
-  border-bottom: 1px solid #e5e7eb;                   /* subtle divider */
+  background-color: var(--dibi-white) !important;
+  /* white base */
+  color: var(--dibi-black) !important;
+  /* default text */
+  border-bottom: 1px solid #e5e7eb;
+  /* subtle divider */
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
@@ -84,7 +93,8 @@ main {
 .navbar .nav-link:hover,
 .navbar .nav-link:focus,
 .navbar .nav-item.active .nav-link {
-  color: var(--dibi-primary) !important;              /* teal hover */
+  color: var(--dibi-primary) !important;
+  /* teal hover */
 }
 
 /* Dropdown (light navbar) */
@@ -101,7 +111,8 @@ main {
 .navbar .dropdown-item:hover,
 .navbar .dropdown-item:focus {
   background-color: var(--dibi-primary);
-  color: var(--dibi-text-on-dark); /* white on teal */
+  color: var(--dibi-text-on-dark);
+  /* white on teal */
 }
 
 /* Toggler: white hamburger -> white cross */
@@ -111,13 +122,17 @@ main {
   height: 42px;
   border: none;
   border-radius: 50%;
-  background-color: var(--dibi-link-hover); /* teal circle */
+  background-color: var(--dibi-link-hover);
+  /* teal circle */
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
 }
-.navbar-toggler:focus { box-shadow: none; }
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
 
 .navbar-toggler-icon {
   background-image: none !important;
@@ -135,18 +150,28 @@ main {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #fff;  /* white bars */
+  background-color: #fff;
+  /* white bars */
   border-radius: 2px;
   transition: all 0.3s ease;
 }
 
-.navbar-toggler-icon::before { top: 0; }
-.navbar-toggler-icon span { top: 6px; }
-.navbar-toggler-icon::after { bottom: 0; }
+.navbar-toggler-icon::before {
+  top: 0;
+}
+
+.navbar-toggler-icon span {
+  top: 6px;
+}
+
+.navbar-toggler-icon::after {
+  bottom: 0;
+}
 
 /* Expanded state */
 .navbar-toggler[aria-expanded="true"] {
-  background-color: #414d61; /* dark background */
+  background-color: #414d61;
+  /* dark background */
 }
 
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
@@ -285,6 +310,10 @@ section+section {
   height: 100%;
   object-fit: cover;
   /* fills circle nicely */
+}
+
+.section-team h3{
+  color: var(--dibi-primary);
 }
 
 .section-researchers {
@@ -530,19 +559,216 @@ section+section {
   line-height: 1.25;
 }
 
-/* (Keep these for completeness, but they are overridden above with variables) */
-.bg-primary-subtle {
-  background: var(--dibi-primary-100) !important;
+.cta {
+  background-color: var(--dibi-secondary);
 }
 
-.bg-success-subtle {
-  background: var(--dibi-success-100) !important;
+.cta .btn {
+  font-weight: 500;
 }
 
-.text-primary {
-  color: var(--dibi-primary) !important;
+.cta .btn:hover,
+.btn:focus,
+.btn:active,
+.btn:first-child:active,
+.btn:focus-visible {
+  background-color: var(--dibi-primary);
+  border-color: var(--dibi-primary);
+  color: #fff;
+  box-shadow: none;
 }
 
-.text-success {
-  color: var(--dibi-success) !important;
+/* ======== Knowledge Hub: sticky sidebar ========= */
+#hubNav .list-group-item {
+  border: 1px solid #e5e7eb;
+  color: var(--dibi-black);
+  transition: background-color .2s ease, color .2s ease, border-color .2s ease, transform .12s ease;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+#hubNav .list-group-item .bi {
+  font-size: 1rem;
+}
+
+/* hover = link teal; active = primary */
+#hubNav .list-group-item:hover {
+  background-color: var(--dibi-link-hover);
+  /* #009abc */
+  border-color: var(--dibi-link-hover);
+  color: var(--dibi-text-on-dark);
+  /* white */
+}
+
+#hubNav .list-group-item.active,
+#hubNav .list-group-item.active:hover,
+#hubNav .list-group-item:focus.active {
+  background-color: var(--dibi-primary);
+  /* #006c91 */
+  border-color: var(--dibi-primary);
+  color: var(--dibi-text-on-dark);
+}
+
+/* subtle radius & focus */
+#hubNav .list-group {
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+#hubNav .list-group-item:focus {
+  box-shadow: 0 0 0 .15rem rgba(0, 106, 145, .15);
+  outline: none;
+}
+
+/* =======GEDSI feature list ========== */
+.gedsi-list {
+  display: grid;
+  gap: .75rem;
+}
+
+.gedsi-item {
+  display: flex;
+  align-items: flex-start;
+  gap: .75rem;
+  padding: .9rem 1rem;
+  border: 1px solid #e9ecef;
+  border-radius: .75rem;
+  background: #fff;
+  transition: border-color .2s ease, box-shadow .2s ease, transform .12s ease;
+}
+
+.gedsi-item:hover {
+  border-color: #dfe5ea;
+  box-shadow: 0 .65rem 1.1rem rgba(0, 0, 0, .06);
+  transform: translateY(-2px);
+}
+
+.gedsi-item .icon {
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  /* default gradient (info → primary) */
+  background: linear-gradient(135deg, var(--dibi-info), var(--dibi-primary));
+}
+
+/* Use primary for Principles, success/teal for Methods */
+.gedsi-item.is-principle .icon {
+  background: linear-gradient(135deg, var(--dibi-primary), #009abc);
+}
+
+.gedsi-item.is-method .icon {
+  background: linear-gradient(135deg, var(--dibi-success), var(--dibi-primary));
+}
+
+.gedsi-item .icon i {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+/* If you use custom SVGs instead of <i>, keep consistent sizing */
+.gedsi-item .icon-svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+.gedsi-item .content strong {
+  display: block;
+  margin-bottom: .15rem;
+  color: var(--dibi-dark);
+  font-weight: 700;
+}
+
+/* Knowledge Hub: spacer between sections */
+.hub-pad {
+  height: clamp(16px, 4vw, 40px);
+  /* mobile -> desktop */
+}
+
+/* Optional subtle divider (use instead of or with .hub-pad) */
+.hub-divider {
+  height: 1px;
+  background: #e5e7eb;
+  margin: clamp(12px, 2.5vw, 28px) 0;
+  border-radius: 1px;
+}
+
+/* Resources: compact download items */
+.resource-list {
+  display: grid;
+  gap: .5rem;
+}
+
+.resource-item {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: .6rem .75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: .75rem;
+  background: #fff;
+  text-decoration: none;
+  transition: background .2s ease, border-color .2s ease, transform .12s ease;
+}
+
+.resource-item:hover {
+  background: #f9fbff;
+  border-color: #dfe5ea;
+  transform: translateY(-1px);
+}
+
+.resource-item .ri-badge {
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .3px;
+  color: var(--dibi-primary);
+  background: rgba(0, 106, 145, .08);
+  border: 1px solid rgba(0, 106, 145, .22);
+  padding: .15rem .5rem;
+  border-radius: 999px;
+}
+
+.resource-item .ri-title {
+  font-weight: 600;
+  color: var(--dibi-dark);
+}
+
+.resource-item .ri-meta {
+  margin-left: auto;
+  font-size: .8rem;
+  color: #6c757d;
+}
+
+/* Partner links: simple, elegant list */
+.partner-link {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .45rem .6rem;
+  border-radius: .5rem;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: background .2s ease, border-color .2s ease, transform .12s ease;
+}
+
+.partner-link .bi {
+  font-size: .95rem;
+  opacity: .7;
+}
+
+.partner-link:hover {
+  background: #f8fafb;
+  border-color: #e5e7eb;
+  transform: translateY(-1px);
+}
+
+/* Ensure links use your global anchor color (no .link-primary overrides) */
+.resource-list a,
+.partner-list a {
+  color: inherit;
 }

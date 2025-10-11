@@ -5,79 +5,64 @@
       Decarbonisation Pathways for Indonesia’s Buses Infrastructure
     </div>
     <div class="topbar-right d-flex align-items-center gap-3">
-      <!-- Use Bootstrap Icons (see note below) -->
-      <a href="https://www.linkedin.com/..." class="topbar-link" aria-label="LinkedIn">
-        <i class="bi bi-linkedin"></i>
-      </a>
-      <a href="https://twitter.com/..." class="topbar-link" aria-label="X / Twitter">
-        <i class="bi bi-twitter-x"></i>
-      </a>
-      <a href="https://youtube.com/..." class="topbar-link" aria-label="YouTube">
-        <i class="bi bi-youtube"></i>
-      </a>
-      <a href="https://github.com/..." class="topbar-link" aria-label="GitHub">
-        <i class="bi bi-github"></i>
-      </a>
+      <a href="https://www.linkedin.com/..." class="topbar-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+      <a href="https://twitter.com/..." class="topbar-link" aria-label="X / Twitter"><i class="bi bi-twitter-x"></i></a>
+      <a href="https://youtube.com/..." class="topbar-link" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+      <a href="https://github.com/..." class="topbar-link" aria-label="GitHub"><i class="bi bi-github"></i></a>
     </div>
   </div>
 </div>
 
 <nav class="navbar navbar-expand-lg">
   <div class="container">
-    <!-- Logo + Brand -->
     <a class="navbar-brand fw-semibold d-flex align-items-center gap-2 fs-2" href="index.html">
       <img src="assets/images/Logo.png" alt="DIBI" width="ms-auto" height="ms-auto" class="d-inline-block">
       <span data-i18n="nav.projects">Projects</span>
     </a>
 
-    <!-- Hamburger button (mobile) -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"><span></span></span>
     </button>
 
-
-    <!-- Nav links -->
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="en/about.html" data-i18n="nav.about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="en/knowledge-hub.html" data-i18n="nav.knowledge">Knowledge
-            Hub</a></li>
-        <li class="nav-item"><a class="nav-link" href="en/gedsi.html" data-i18n="nav.gedsi">GEDSI</a></li>
-        <li class="nav-item"><a class="nav-link" href="en/resources.html" data-i18n="nav.resources">Resources</a></li>
+        <!-- About dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button"
+             data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav.about">About</a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="aboutDropdown">
+            <li><a class="dropdown-item" href="en/dibi-1.html" data-i18n="nav.about_dibi1">DIBI 1</a></li>
+            <li><a class="dropdown-item" href="en/dibi-2.html" data-i18n="nav.about_dibi2">DIBI 2</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link" href="en/knowledge-hub.html" data-i18n="nav.knowledge">Knowledge Hub</a></li>
+        <li class="nav-item"><a class="nav-link" href="en/events.html" data-i18n="nav.events">Events</a></li>
+        <li class="nav-item"><a class="nav-link" href="en/media.html" data-i18n="nav.media">Media Releases</a></li>
+        <li class="nav-item"><a class="nav-link" href="en/gallery.html" data-i18n="nav.gallery">Gallery</a></li>
         <li class="nav-item"><a class="nav-link" href="en/contact.html" data-i18n="nav.contact">Contact</a></li>
 
-        <!-- Language Dropdown -->
+        <!-- Language -->
         <li class="nav-item dropdown ms-lg-3">
-          <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false" data-i18n="nav.language">
-            Language
-          </a>
+          <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button"
+             data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav.language">Language</a>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown" id="lang-select">
-            <li><a class="dropdown-item" href="index.html" value="en" data-lang="en">English</a></li>
-            <li><a class="dropdown-item" href="id/index.html" value="id" data-lang="id">Bahasa Indonesia</a></li>
+            <li><a class="dropdown-item" href="index.html" value="en" data-lang="en" data-i18n="lang.english">English</a></li>
+            <li><a class="dropdown-item" href="id/index.html" value="id" data-lang="id" data-i18n="lang.indonesian">Bahasa Indonesia</a></li>
           </ul>
         </li>
       </ul>
 
-      <!-- Topbar (mobile-only) — socials under nav links -->
+      <!-- Topbar (mobile-only) — socials -->
       <div class="topbar-mobile d-lg-none pt-2">
         <div class="d-flex align-items-center gap-3 justify-content-end">
-          <a href="https://www.linkedin.com/..." class="topbar-link" aria-label="LinkedIn">
-            <i class="bi bi-linkedin"></i>
-          </a>
-          <a href="https://twitter.com/..." class="topbar-link" aria-label="X / Twitter">
-            <i class="bi bi-twitter-x"></i>
-          </a>
-          <a href="https://youtube.com/..." class="topbar-link" aria-label="YouTube">
-            <i class="bi bi-youtube"></i>
-          </a>
-          <a href="https://github.com/..." class="topbar-link" aria-label="GitHub">
-            <i class="bi bi-github"></i>
-          </a>
+          <a href="https://www.linkedin.com/..." class="topbar-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="https://twitter.com/..." class="topbar-link" aria-label="X / Twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="https://youtube.com/..." class="topbar-link" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="https://github.com/..." class="topbar-link" aria-label="GitHub"><i class="bi bi-github"></i></a>
         </div>
       </div>
-
     </div>
   </div>
 </nav>

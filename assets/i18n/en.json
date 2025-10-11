@@ -1,12 +1,18 @@
 {
     "dibi": "Decarbonisation Pathways for Indonesia’s Buses Infrastructure",
     "nav.brand": "DIBI",
+    "nav.projects": "Projects",
     "nav.about": "About",
+    "nav.about_dibi1": "DIBI I",
+    "nav.about_dibi2": "DIBI II",
     "nav.knowledge": "Knowledge Hub",
+    "nav.events": "Events",
+    "nav.media": "Media Releases",
+    "nav.gallery": "Gallery",
     "nav.contact": "Contact",
     "nav.language": "Language",
-    "nav.projects": "Projects",
-    "footer.resources": "Resources",
-    "footer.contact": "Contact",
-    "footer.copyright": "© 2025 DIBI Knowledge Platform"
+    "lang.english": "English",
+    "lang.indonesian": "Bahasa Indonesia",
+    "footer.copyright": "© 2025 DIBI Knowledge Platform",
+    "footer.contact": "Contact"
 }

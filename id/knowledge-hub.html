@@ -26,94 +26,374 @@
 </head>
 
 <body>
+  <!-- Navbar (injected) -->
   <div id="navbar" data-include="navbar"></div>
 
   <main class="py-5">
     <div class="container">
-      <header class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-4">
-        <div>
-          <h1 class="display-6 fw-semibold mb-0">Pusat Pengetahuan</h1>
-          <p class="text-muted mb-0">Laporan, ringkasan, dan studi kasus dari proyek.</p>
-        </div>
-        <form class="d-flex" role="search" onsubmit="return false;">
-          <input class="form-control" type="search" placeholder="Cari keluaran…" aria-label="Search">
-        </form>
-      </header>
-
-      <!-- Filters -->
-      <div class="d-flex flex-wrap gap-2 mb-4">
-        <button class="btn btn-sm btn-outline-primary active">Semua</button>
-        <button class="btn btn-sm btn-outline-primary">Laporan</button>
-        <button class="btn btn-sm btn-outline-primary">Studi Kasus</button>
-        <button class="btn btn-sm btn-outline-primary">Ringkasan</button>
-        <button class="btn btn-sm btn-outline-primary">Slide</button>
-      </div>
-
-      <!-- Outputs grid -->
       <div class="row g-4">
-        <!-- Card -->
-        <div class="col-md-6 col-lg-4">
-          <a class="text-decoration-none" href="assets/docs/depot-efficiency.pdf">
-            <div class="card h-100 border-0 shadow-sm rounded-4">
-              <div class="card-body">
-                <span class="badge bg-primary-subtle text-primary mb-2">Laporan</span>
-                <h2 class="h5">Efisiensi Energi Depo</h2>
-                <p class="text-muted small mb-3">Penilaian dasar penggunaan energi, kenyamanan termal, dan kebisingan di terminal bus utama.</p>
-                <div class="d-flex justify-content-between small text-muted">
-                  <span>Diperbarui Ags 2025</span>
-                  <span>PDF · 1.2 MB</span>
+        <!-- Sidebar -->
+        <aside class="col-lg-3">
+          <nav id="hubNav" class="position-sticky" style="top: 96px;">
+            <div class="list-group rounded-4">
+              <a class="list-group-item list-group-item-action d-flex align-items-center gap-2 active" href="#overview">
+                <i class="bi bi-grid"></i> Ikhtisar
+              </a>
+              <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" href="#gedsi">
+                <i class="bi bi-people"></i> GEDSI
+              </a>
+              <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" href="#resources">
+                <i class="bi bi-folder2-open"></i> Sumber Daya
+              </a>
+            </div>
+          </nav>
+        </aside>
+
+        <!-- Content -->
+        <section class="col-lg-9" data-bs-spy="scroll" data-bs-target="#hubNav" data-bs-smooth-scroll="true"
+          tabindex="0">
+
+          <!-- ================= Ikhtisar ================= -->
+          <section id="overview" class="mb-5">
+            <header class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-4">
+              <div>
+                <h1 class="display-6 fw-semibold mb-0">Pusat Pengetahuan</h1>
+                <p class="text-muted mb-0">Laporan, ringkasan, studi kasus, dan panduan praktis dari proyek.</p>
+              </div>
+              <form class="d-flex" role="search" onsubmit="return false;">
+                <input class="form-control" type="search" placeholder="Cari publikasi…" aria-label="Search">
+              </form>
+            </header>
+
+            <!-- Filter -->
+            <div id="hub-filters" class="filter-bar d-flex flex-wrap gap-2 mb-4">
+              <button class="btn btn-sm btn-outline-primary active">Semua</button>
+              <button class="btn btn-sm btn-outline-primary">Laporan</button>
+              <button class="btn btn-sm btn-outline-primary">Studi Kasus</button>
+              <button class="btn btn-sm btn-outline-primary">Ringkasan</button>
+              <button class="btn btn-sm btn-outline-primary">Presentasi</button>
+            </div>
+
+            <!-- Grid -->
+            <div class="row g-4">
+              <div class="col-md-6 col-lg-4">
+                <a class="text-decoration-none" href="assets/docs/depot-efficiency.pdf">
+                  <div class="card h-100 border-0 shadow-sm rounded-4">
+                    <div class="card-body">
+                      <span class="badge bg-primary-subtle text-primary mb-2">Laporan</span>
+                      <h2 class="h5">Efisiensi Energi Depo</h2>
+                      <p class="text-muted small mb-3">Penilaian dasar penggunaan energi, kenyamanan termal, dan
+                        kebisingan di terminal bus utama.</p>
+                      <div class="d-flex justify-content-between small text-muted">
+                        <span>Diperbarui Ags 2025</span>
+                        <span>PDF · 1.2 MB</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-md-6 col-lg-4">
+                <a class="text-decoration-none" href="assets/docs/air-quality-baseline.pdf">
+                  <div class="card h-100 border-0 shadow-sm rounded-4">
+                    <div class="card-body">
+                      <span class="badge bg-primary-subtle text-primary mb-2">Laporan</span>
+                      <h2 class="h5">Dasar Kualitas Udara</h2>
+                      <p class="text-muted small mb-3">Pemantauan PM, karbon, dan nitrat untuk mendukung operasi dan
+                        kebijakan.</p>
+                      <div class="d-flex justify-content-between small text-muted">
+                        <span>Diperbarui Ags 2025</span>
+                        <span>PDF · 980 KB</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-md-6 col-lg-4">
+                <a class="text-decoration-none" href="assets/docs/renewable-integration.pdf">
+                  <div class="card h-100 border-0 shadow-sm rounded-4">
+                    <div class="card-body">
+                      <span class="badge bg-success-subtle text-success mb-2">Studi Kasus</span>
+                      <h2 class="h5">Integrasi Energi Terbarukan</h2>
+                      <p class="text-muted small mb-3">Opsi panel surya dan BESS untuk strategi pengisian daya di depo.
+                      </p>
+                      <div class="d-flex justify-content-between small text-muted">
+                        <span>Diperbarui Jul 2025</span>
+                        <span>PDF · 1.6 MB</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <div class="hub-pad"></div>
+
+          <!-- ================= GEDSI ================= -->
+          <section id="gedsi" class="mb-5">
+            <header class="mb-3">
+              <h2 class="h4 fw-semibold mb-1">Kesetaraan Gender, Disabilitas, dan Inklusi Sosial (GEDSI)</h2>
+              <p class="text-muted mb-0">Mengintegrasikan prinsip kesetaraan dan aksesibilitas dalam perencanaan
+                transportasi dan elektrifikasi.</p>
+            </header>
+
+            <div class="p-4 bg-white border rounded-4 mb-4">
+              <div class="row g-4">
+                <!-- Prinsip -->
+                <div class="col-12 col-xl-6">
+                  <h3 class="h6 text-uppercase text-muted mb-3">Prinsip</h3>
+
+                  <div class="gedsi-list">
+                    <div class="gedsi-item is-principle">
+                      <span class="icon"><i class="bi bi-universal-access"></i></span>
+                      <div class="content">
+                        <strong>Akses &amp; Keamanan</strong>
+                        <p class="small text-muted mb-0">Menjamin keamanan bagi perempuan, penyandang disabilitas, dan
+                          kelompok rentan.</p>
+                      </div>
+                    </div>
+
+                    <div class="gedsi-item is-principle">
+                      <span class="icon"><i class="bi bi-people"></i></span>
+                      <div class="content">
+                        <strong>Ko-desain</strong>
+                        <p class="small text-muted mb-0">Berkolaborasi dengan komunitas dan operator untuk mencerminkan
+                          pengalaman nyata.</p>
+                      </div>
+                    </div>
+
+                    <div class="gedsi-item is-principle">
+                      <span class="icon"><i class="bi bi-graph-up"></i></span>
+                      <div class="content">
+                        <strong>Berbasis Bukti</strong>
+                        <p class="small text-muted mb-0">Gunakan analisis interseksional untuk pengambilan keputusan dan
+                          investasi.</p>
+                      </div>
+                    </div>
+
+                    <div class="gedsi-item is-principle">
+                      <span class="icon"><i class="bi bi-sliders2-vertical"></i></span>
+                      <div class="content">
+                        <strong>Pengukuran &amp; Pengurangan Hambatan</strong>
+                        <p class="small text-muted mb-0">Pantau distribusi manfaat dan kurangi hambatan partisipasi.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Methodes -->
+                <div class="col-12 col-xl-6">
+                  <h3 class="h6 text-uppercase text-muted mb-3 mt-3 mt-xl-0">Metode</h3>
+
+                  <div class="gedsi-list">
+                    <div class="gedsi-item is-method">
+                      <span class="icon"><i class="bi bi-clipboard-check"></i></span>
+                      <div class="content">
+                        <strong>Keterlibatan Inklusif</strong>
+                        <p class="small text-muted mb-0">Survei dan diskusi kelompok di terminal dan sepanjang rute.</p>
+                      </div>
+                    </div>
+
+                    <div class="gedsi-item is-method">
+                      <span class="icon"><i class="bi bi-eye"></i></span>
+                      <div class="content">
+                        <strong>Audit Aksesibilitas</strong>
+                        <p class="small text-muted mb-0">Menilai depo, bus, halte, dan sistem informasi.</p>
+                      </div>
+                    </div>
+
+                    <div class="gedsi-item is-method">
+                      <span class="icon"><i class="bi bi-bar-chart-line"></i></span>
+                      <div class="content">
+                        <strong>Data Terpilah</strong>
+                        <p class="small text-muted mb-0">Dashboard berdasarkan jenis kelamin, usia, dan disabilitas.</p>
+                      </div>
+                    </div>
+
+                    <div class="gedsi-item is-method">
+                      <span class="icon"><i class="bi bi-journal-text"></i></span>
+                      <div class="content">
+                        <strong>Panduan Aksi</strong>
+                        <p class="small text-muted mb-0">Rekomendasi kebijakan dan desain dengan panduan implementasi.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </a>
-        </div>
 
-        <div class="col-md-6 col-lg-4">
-          <a class="text-decoration-none" href="assets/docs/air-quality-baseline.pdf">
-            <div class="card h-100 border-0 shadow-sm rounded-4">
-              <div class="card-body">
-                <span class="badge bg-primary-subtle text-primary mb-2">Laporan</span>
-                <h2 class="h5">Dasar Kualitas Udara</h2>
-                <p class="text-muted small mb-3">Pemantauan PM, karbon, dan nitrat untuk mendukung operasional dan kebijakan.</p>
-                <div class="d-flex justify-content-between small text-muted">
-                  <span>Diperbarui Ags 2025</span>
-                  <span>PDF · 980 KB</span>
+            <div class="p-4 bg-white border rounded-4">
+              <h3 class="h6 text-uppercase text-muted mb-3">Hasil yang Diharapkan</h3>
+              <div class="row g-3">
+                <div class="col-12">
+                  <div class="p-3 border rounded-3">
+                    <div class="d-flex align-items-center gap-2 mb-1">
+                      <span class="icon-bubble"><i class="bi bi-shield-check"></i></span>
+                      <strong>Lingkungan yang Lebih Aman dan Inklusif</strong>
+                    </div>
+                    <p class="small text-muted mb-0">Pencahayaan, papan informasi, dan kenyamanan yang lebih baik di
+                      depo dan halte.</p>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="p-3 border rounded-3">
+                    <div class="d-flex align-items-center gap-2 mb-1">
+                      <span class="icon-bubble"><i class="bi bi-people"></i></span>
+                      <strong>Peningkatan Partisipasi</strong>
+                    </div>
+                    <p class="small text-muted mb-0">Keterlibatan perempuan, pemuda, dan penyandang disabilitas dalam
+                      perencanaan.</p>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="p-3 border rounded-3">
+                    <div class="d-flex align-items-center gap-2 mb-1">
+                      <span class="icon-bubble"><i class="bi bi-activity"></i></span>
+                      <strong>Hasil Kesetaraan yang Terukur</strong>
+                    </div>
+                    <p class="small text-muted mb-0">Dashboard dan indikator kinerja untuk memantau distribusi manfaat.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="alert alert-success mt-3 mb-0">
+                <strong>Komitmen:</strong> GEDSI terintegrasi di seluruh kegiatan—mulai dari analisis hingga pelibatan
+                pemangku kepentingan dan diseminasi.
+              </div>
+            </div>
+          </section>
+
+          <div class="hub-pad"></div>
+
+          <!-- ================= Resources ================= -->
+          <section id="resources" class="mb-5">
+            <header class="mb-3 d-flex align-items-center justify-content-between flex-wrap gap-2">
+              <div>
+                <h2 class="h4 fw-semibold mb-1">Sumber Daya</h2>
+                <p class="text-muted mb-0">Unduhan, tautan mitra, dan aset merek.</p>
+              </div>
+            </header>
+
+            <!-- Reuse English resource grid (titles are mostly file names) -->
+            <div class="row g-4">
+              <!-- Downloads (ID) -->
+              <div class="col-lg-6">
+                <div class="p-4 bg-white border rounded-4 h-100">
+                  <h3 class="h6 text-uppercase text-muted mb-3">Unduhan</h3>
+                  <ul class="resource-list list-unstyled mb-0">
+                    <li>
+                      <a class="resource-item" href="assets/docs/depot-efficiency.pdf">
+                        <span class="ri-badge">PDF</span>
+                        <span class="ri-title">Efisiensi Energi Depo</span>
+                        <span class="ri-meta">1.2 MB · Aug 2025</span> <!-- month localized -->
+                      </a>
+                    </li>
+                    <li>
+                      <a class="resource-item" href="assets/docs/air-quality-baseline.pdf">
+                        <span class="ri-badge">PDF</span>
+                        <span class="ri-title">Dasar Kualitas Udara</span>
+                        <span class="ri-meta">980 KB · Aug 2025</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="resource-item" href="assets/docs/renewable-integration.pdf">
+                        <span class="ri-badge">PDF</span>
+                        <span class="ri-title">Integrasi Energi Terbarukan</span>
+                        <span class="ri-meta">1.6 MB · Jul 2025</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="resource-item" href="assets/docs/dibi-project-brief.pdf">
+                        <span class="ri-badge">PDF</span>
+                        <span class="ri-title">Ringkasan Proyek</span>
+                        <span class="ri-meta">—</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Partner links (compact list, ID) -->
+              <div class="col-lg-6">
+                <div class="p-4 bg-white border rounded-4 h-100">
+                  <h3 class="h6 text-uppercase text-muted mb-3">Tautan Mitra</h3>
+                  <ul class="partner-list list-unstyled row row-cols-1 row-cols-sm-2 g-2 mb-0">
+                    <!-- Keep official brand names; translate where appropriate -->
+                    <li class="col">
+                      <a class="partner-link" target="_blank" rel="noopener" href="https://www.canberra.edu.au/">
+                        <i class="bi bi-box-arrow-up-right"></i> Universitas Canberra
+                      </a>
+                    </li>
+                    <li class="col">
+                      <a class="partner-link" target="_blank" rel="noopener" href="https://nevce.au/">
+                        <i class="bi bi-box-arrow-up-right"></i> NEVCE
+                      </a>
+                    </li>
+                    <li class="col">
+                      <a class="partner-link" target="_blank" rel="noopener" href="https://evenergi.com/">
+                        <i class="bi bi-box-arrow-up-right"></i> EV Energi
+                      </a>
+                    </li>
+                    <li class="col">
+                      <a class="partner-link" target="_blank" rel="noopener" href="https://www.itpau.com.au/">
+                        <i class="bi bi-box-arrow-up-right"></i> ITP Renewables
+                      </a>
+                    </li>
+                    <li class="col">
+                      <a class="partner-link" target="_blank" rel="noopener" href="https://uns.ac.id/">
+                        <i class="bi bi-box-arrow-up-right"></i> UNS
+                      </a>
+                    </li>
+                    <li class="col">
+                      <a class="partner-link" target="_blank" rel="noopener" href="https://www.umn.ac.id/">
+                        <i class="bi bi-box-arrow-up-right"></i> UMN
+                      </a>
+                    </li>
+                    <li class="col">
+                      <a class="partner-link" target="_blank" rel="noopener" href="https://iceinstitute.id/">
+                        <i class="bi bi-box-arrow-up-right"></i> ICE Institute
+                      </a>
+                    </li>
+                    <li class="col">
+                      <a class="partner-link" target="_blank" rel="noopener" href="https://iclei.or.id/">
+                        <i class="bi bi-box-arrow-up-right"></i> ICLEI Indonesia
+                      </a>
+                    </li>
+                    <li class="col">
+                      <a class="partner-link" target="_blank" rel="noopener" href="https://www.brin.go.id/">
+                        <i class="bi bi-box-arrow-up-right"></i> BRIN
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
-          </a>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <a class="text-decoration-none" href="assets/docs/renewable-integration.pdf">
-            <div class="card h-100 border-0 shadow-sm rounded-4">
-              <div class="card-body">
-                <span class="badge bg-success-subtle text-success mb-2">Studi Kasus</span>
-                <h2 class="h5">Integrasi Energi Terbarukan</h2>
-                <p class="text-muted small mb-3">Opsi tenaga surya (PV) dan BESS untuk strategi pengisian daya depo.</p>
-                <div class="d-flex justify-content-between small text-muted">
-                  <span>Diperbarui Jul 2025</span>
-                  <span>PDF · 1.6 MB</span>
-                </div>
+            <!-- Brand & Assets -->
+            <section class="mt-4">
+              <div class="p-4 bg-white border rounded-4">
+                <h3 class="h6 text-uppercase text-muted mb-2">Brand &amp; Assets</h3>
+                <p class="mb-3">Logo pack, favicon, and template slides for presentations.</p>
+                <a class="btn btn-sm me-2" href="assets/brand/dibi-logo-pack.zip">Download logo pack</a>
+                <a class="btn btn-outline-primary btn-sm" href="assets/brand/dibi-slide-template.pptx">Presentation
+                  template</a>
               </div>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <div class="text-center mt-4">
-        <a class="btn btn-outline-secondary btn-sm" href="#">Muat lebih banyak</a>
+            </section>
+          </section>
+        </section>
       </div>
     </div>
   </main>
 
   <div id="footer" data-include="footer"></div>
 
-  <!-- Bootstrap JS + Include script -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
-  <script src="assets/js/include.js"></script>
+  <script src="assets/js/include.js" defer></script>
+  <script src="assets/js/search.js" defer></script>
 </body>
 
 </html>
