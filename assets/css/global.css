@@ -1,0 +1,75 @@
+/* ===== DIBI Theme: global tokens, fonts, Bootstrap overrides ===== */
+:root {
+    /* Brand */
+    --dibi-primary: #006c91;
+    --dibi-secondary: #414d61;
+    --dibi-success: #00a79d;
+    --dibi-info: #92d6e3;
+    --dibi-warning: #ffcc32;
+    --dibi-danger: #f15f5c;
+    --dibi-dark: #414042;
+  
+    /* Neutrals */
+    --dibi-white: #ffffff;
+    --dibi-black: #000000;
+    --dibi-footer-light: #f1f1f1;
+    --dibi-footer-dark: #414d61;
+  
+    /* Tints/utility */
+    --dibi-primary-100: #e6f3f7;
+    --dibi-success-100: #e7faf7;
+    --dibi-info-100: #eaf7fb;
+  
+    /* Text/link */
+    --dibi-text-on-dark: #ffffff;
+    --dibi-text-on-light: #000000;
+    --dibi-link: #006c91;
+    --dibi-link-hover: #009abc;
+  
+    --dibi-radius: 0.75rem;
+  }
+  
+  /* Bootstrap variable overrides (works without changing HTML) */
+  :root {
+    --bs-primary: var(--dibi-primary);
+    --bs-secondary: var(--dibi-secondary);
+    --bs-success: var(--dibi-success);
+    --bs-info: var(--dibi-info);
+    --bs-warning: var(--dibi-warning);
+    --bs-danger: var(--dibi-danger);
+    --bs-dark: var(--dibi-dark);
+  
+    --bs-body-font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-body-color: var(--dibi-text-on-light);
+    --bs-body-bg: var(--dibi-white);
+    --bs-link-color: var(--dibi-link);
+    --bs-link-hover-color: var(--dibi-link-hover);
+    --bs-border-radius: var(--dibi-radius);
+  }
+  
+  /* Global structure & typography overrides (no HTML changes needed) */
+  html, body { height: 100%; }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    font-family: var(--bs-body-font-family);
+    color: var(--dibi-black);
+    background: var(--dibi-white);
+  }
+  main { flex: 1; }
+  
+  /* Headings: prefer Verlag if you add it; otherwise Lato/system stack */
+  .h1, .h2, .h3, .h4, .h5, .h6,
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Verlag A", "Verlag B", "Verlag", 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  
+  /* Optional: make links visibly branded without editing HTML */
+  a { color: var(--dibi-link); }
+  a:hover { color: var(--dibi-link-hover); }
+  

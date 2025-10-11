@@ -8,51 +8,166 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* full viewport height */
+  min-height: 100vh;
+  /* full viewport height */
   scroll-behavior: smooth;
 }
 
 main {
-  flex: 1; /* take available space */
+  flex: 1;
+  /* take available space */
 }
-
 
 /* ---------------------- Navbar Custom CSS ----------------- */
-/* Navbar custom tweaks */
+/* Topbar (desktop band above navbar) */
+.topbar {
+  background: var(--dibi-primary);
+  color: var(--dibi-text-on-dark);
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.topbar .dibi-text{
+  font-size: 12px;
+}
+
+.topbar a.topbar-link {
+  color: var(--dibi-text-on-dark);
+  font-size: 1.1rem;          /* icon sizing */
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  transition: color .2s ease-in-out, transform .15s ease-in-out;
+}
+.topbar a.topbar-link:hover,
+.topbar a.topbar-link:focus {
+  color: var(--dibi-info);     /* subtle hover */
+  transform: translateY(-1px);
+}
+
+/* Mobile topbar inside collapse */
+.topbar-mobile {
+  border-top: 1px solid rgba(0,0,0,.06);
+  margin-top: .25rem;
+  padding-top: .25rem;
+}
+.topbar-mobile .topbar-link {
+  color: var(--dibi-primary);
+}
+.topbar-mobile .topbar-link:hover {
+  color: var(--dibi-link-hover);
+}
+
+/* Brand logo sizing */
 .navbar-brand img {
-  max-height: 30px;
+  max-height: 36px;
+  height: auto;
+  width: auto;
+  object-fit: contain;
 }
 
-.navbar-brand {
-  letter-spacing: 0.5px;
+/* Navbar base */
+.navbar {
+  background-color: var(--dibi-white) !important;     /* white base */
+  color: var(--dibi-black) !important;                /* default text */
+  border-bottom: 1px solid #e5e7eb;                   /* subtle divider */
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
-.navbar-nav .nav-link {
-  font-weight: 500;
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: var(--dibi-black) !important;
+  font-weight: 600;
   transition: color 0.2s ease-in-out;
 }
 
-.navbar-nav .nav-link:hover {
-  color: #ffc107 !important;
-  /* highlight on hover */
+.navbar .nav-link:hover,
+.navbar .nav-link:focus,
+.navbar .nav-item.active .nav-link {
+  color: var(--dibi-primary) !important;              /* teal hover */
 }
 
-.dropdown-menu .dropdown-item.active {
-  background-color: #0d6efd;
-  /* Bootstrap primary */
-  color: #fff;
+/* Dropdown (light navbar) */
+.navbar .dropdown-menu {
+  background-color: var(--dibi-white);
+  border: 1px solid #e5e7eb;
 }
 
-.bg-primary-subtle {
-  background: #e9f1ff !important;
-  color: #0d6efd !important;
+.navbar .dropdown-item {
+  color: var(--dibi-black);
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
-.bg-success-subtle {
-  background: #eaf7f0 !important;
-  color: #198754 !important;
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus {
+  background-color: var(--dibi-primary);
+  color: var(--dibi-text-on-dark); /* white on teal */
 }
 
+/* Toggler: white hamburger -> white cross */
+.navbar-toggler {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--dibi-link-hover); /* teal circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.navbar-toggler:focus { box-shadow: none; }
+
+.navbar-toggler-icon {
+  background-image: none !important;
+  width: 20px;
+  height: 14px;
+  position: relative;
+  display: inline-block;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after,
+.navbar-toggler-icon span {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;  /* white bars */
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon::before { top: 0; }
+.navbar-toggler-icon span { top: 6px; }
+.navbar-toggler-icon::after { bottom: 0; }
+
+/* Expanded state */
+.navbar-toggler[aria-expanded="true"] {
+  background-color: #414d61; /* dark background */
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+  transform: rotate(45deg);
+  top: 6px;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+  transform: rotate(-45deg);
+  bottom: 6px;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon span {
+  opacity: 0;
+}
+
+/* Hover refinement */
+.navbar-toggler:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}
 
 /* ---------------------Homepage ---------------- */
 /* Hero images keep aspect and crop nicely */
@@ -87,15 +202,15 @@ section+section {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: rgba(13, 110, 253, 0.08);
-  /* subtle tint; overridden by text color */
+  background: color-mix(in srgb, var(--dibi-primary) 8%, transparent);
+  /* subtle tint */
   font-size: 18px;
   line-height: 1;
 }
 
 /* ------- Fancy Highlight Pillars ------------*/
 .highlights {
-  background: #f0f6ff;
+  background: var(--dibi-info-100);
 }
 
 .pillar-box {
@@ -114,14 +229,12 @@ section+section {
   line-height: 1;
 }
 
-/* Optional accent background hover */
 .pillar-box:hover .pillar-icon {
   transform: scale(1.1);
   transition: transform 0.2s ease;
 }
 
 /* ------------ Partner Logo Wall ----------*/
-/* Logo card base */
 .logo-card {
   display: flex;
   align-items: center;
@@ -135,12 +248,9 @@ section+section {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover effect: lift up */
 .logo-card:hover {
   transform: translateY(-6px);
-  /* moves card upward */
   box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.1);
-  /* subtle shadow */
 }
 
 .logo-frame {
@@ -153,9 +263,7 @@ section+section {
 
 .logo-frame img {
   width: 100%;
-  /* takes full width of its parent */
   height: auto;
-  /* keeps natural aspect ratio */
   object-fit: contain;
 }
 
@@ -180,7 +288,7 @@ section+section {
 }
 
 .section-researchers {
-  background: #f0f6ff;
+  background: var(--dibi-info-100);
 }
 
 /* Researcher pills */
@@ -200,7 +308,6 @@ section+section {
 
 .researcher-pill .r-org {
   color: #6c757d;
-  /* muted */
   font-size: .95rem;
 }
 
@@ -220,8 +327,8 @@ section+section {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: #e9f2ff;
-  color: #0d6efd;
+  background: var(--dibi-primary-100);
+  color: var(--dibi-primary);
   display: grid;
   place-items: center;
   font-weight: 700;
@@ -251,9 +358,9 @@ section+section {
 .loc-hero {
   min-height: 180px;
   background:
-    linear-gradient(160deg, rgba(13, 110, 253, .85), rgba(25, 135, 84, .85)),
-    url("assets/img/map-id-au.svg") center/cover no-repeat;
-  /* replace with your map/visual */
+    linear-gradient(160deg,
+      color-mix(in srgb, var(--dibi-primary) 85%, transparent),
+      color-mix(in srgb, var(--dibi-success) 85%, transparent));
   border-bottom: 1px solid rgba(255, 255, 255, .25);
 }
 
@@ -294,13 +401,13 @@ section+section {
 .theme-energy {
   background: #f1f8ff;
   border-color: #d9e8ff;
-  color: #0d6efd;
+  color: var(--dibi-primary);
 }
 
 .theme-ops {
   background: #f0fff4;
   border-color: #d6f5e3;
-  color: #198754;
+  color: var(--dibi-success);
 }
 
 .theme-built {
@@ -325,11 +432,11 @@ section+section {
 }
 
 .bg-theme-energy {
-  background: #0d6efd;
+  background: var(--dibi-primary);
 }
 
 .bg-theme-ops {
-  background: #198754;
+  background: var(--dibi-success);
 }
 
 .bg-theme-built {
@@ -378,8 +485,8 @@ section+section {
   height: 40px;
   width: 56px;
   border-radius: .5rem;
-  background: #eef4ff;
-  color: #0d6efd;
+  background: var(--dibi-primary-100);
+  color: var(--dibi-primary);
   font-weight: 700;
   font-size: .8rem;
   letter-spacing: .5px;
@@ -395,7 +502,7 @@ section+section {
 
 .doc-cta {
   font-size: .85rem;
-  color: #0d6efd;
+  color: var(--dibi-primary);
   font-weight: 600;
 }
 
@@ -423,19 +530,19 @@ section+section {
   line-height: 1.25;
 }
 
-/* Pills (Bootstrap “subtle” backgrounds used in badges above) */
+/* (Keep these for completeness, but they are overridden above with variables) */
 .bg-primary-subtle {
-  background: #e9f1ff !important;
+  background: var(--dibi-primary-100) !important;
 }
 
 .bg-success-subtle {
-  background: #eaf7f0 !important;
+  background: var(--dibi-success-100) !important;
 }
 
 .text-primary {
-  color: #0d6efd !important;
+  color: var(--dibi-primary) !important;
 }
 
 .text-success {
-  color: #198754 !important;
+  color: var(--dibi-success) !important;
 }
