@@ -38,49 +38,48 @@
         <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
         <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
       </div>
-  
+
       <div class="carousel-inner">
         <!-- Slide 1 -->
-        <div class="carousel-item active">
-          <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="1200" height="500"
-            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice"
-            focusable="false">
-            <rect width="100%" height="100%" fill="#6c757d"></rect>
-            <text x="50%" y="50%" fill="#fff" dy=".3em" text-anchor="middle" font-size="40">Slide 1 – Project
-              Title</text>
-          </svg>
+        <div class="carousel-item active position-relative">
+          <img src="assets/images/hero-section/hero-image_01.webp" class="d-block w-100"
+            alt="Decarbonisation Pathways hero image" style="height:500px; object-fit:cover;" />
+          <div class="carousel-overlay"></div>
           <div class="carousel-caption text-start">
             <h1 class="display-6 fw-bold">Decarbonisation Pathways</h1>
-            <p>Placeholder text describing the first slide.</p>
+            <p>We create digital twins of bus depots with Australian software and a routing-energy model to plan a
+              cost-effective, scalable shift to electric buses—cutting emissions and supporting Indonesia’s battery
+              value chain.</p>
           </div>
         </div>
-  
+
         <!-- Slide 2 -->
-        <div class="carousel-item">
-          <svg class="bd-placeholder-img d-block w-100" width="1200" height="500" xmlns="http://www.w3.org/2000/svg">
-            <rect width="100%" height="100%" fill="#198754"></rect>
-            <text x="50%" y="50%" fill="#fff" dy=".3em" text-anchor="middle" font-size="40">Slide 2 –
-              Sustainability</text>
-          </svg>
+        <div class="carousel-item position-relative">
+          <img src="assets/images/hero-section/hero-image_02.webp" class="d-block w-100"
+            alt="Renewables Integration hero image" style="height:500px; object-fit:cover;" />
+          <div class="carousel-overlay"></div>
           <div class="carousel-caption text-start">
             <h1 class="display-6 fw-bold">Renewables Integration</h1>
-            <p>Placeholder text describing the second slide.</p>
+            <p>We model solar, storage and grid options and optimise depot charging, while assessing building efficiency
+              and thermal comfort to cut pollutants (PM2.5, PM10, carbon, nitrates).</p>
           </div>
         </div>
-  
+
         <!-- Slide 3 -->
-        <div class="carousel-item">
-          <svg class="bd-placeholder-img d-block w-100" width="1200" height="500" xmlns="http://www.w3.org/2000/svg">
-            <rect width="100%" height="100%" fill="#0d6efd"></rect>
-            <text x="50%" y="50%" fill="#fff" dy=".3em" text-anchor="middle" font-size="40">Slide 3 – Inclusion</text>
-          </svg>
+        <div class="carousel-item position-relative">
+          <img src="assets/images/hero-section/hero-image_03.webp" class="d-block w-100"
+            alt="Equity and Inclusion hero image" style="height:500px; object-fit:cover;" />
+          <div class="carousel-overlay"></div>
           <div class="carousel-caption text-start">
             <h1 class="display-6 fw-bold">Equity & Inclusion</h1>
-            <p>Placeholder text describing the third slide.</p>
+            <p>Using GEDSI-led surveys, FGDs and site observations, we examine who benefits and how. Early results show
+              women are ~77% of users and many report heat stress—evidence guiding more inclusive, healthy public
+              transport.</p>
           </div>
         </div>
       </div>
-  
+
+
       <!-- Controls -->
       <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon"></span>
@@ -235,7 +234,8 @@
         <div class="col">
           <a class="logo-card" href="https://nevce.au/" target="_blank" rel="noopener">
             <div class="logo-frame">
-              <img src="assets/images/organisations/NEVCE-logo.avif" alt="National Electric Vehicle Centre of Excellence">
+              <img src="assets/images/organisations/NEVCE-logo.avif"
+                alt="National Electric Vehicle Centre of Excellence">
             </div>
           </a>
         </div>
@@ -665,44 +665,66 @@
                 <span class="badge rounded-pill bg-primary-subtle text-primary fw-semibold">Peer & Tech Reports</span>
               </div>
 
-              <div class="doc-list">
-                <!-- Doc item -->
-                <a class="doc-item" href="assets/docs/depot-efficiency.pdf">
+              <!-- PDF List -->
+              <div class="doc-list" id="pdf-list">
+                <!-- Item 1 -->
+                <article class="doc-item"
+                  data-pdf="assets/pdfs/Decarbonisation Pathways for Indonesia’s Buses Infrastructure (DIBI) using Routing Energy Estimation Tool, Renewable Energy, and Ecosystem Modelling.pdf"
+                  data-title="DIBI Poster" data-updated="2024-2025" data-size="3.2 MB">
                   <div class="doc-icon">PDF</div>
                   <div class="doc-meta">
-                    <div class="doc-title">Depot Energy Efficiency Report</div>
+                    <div class="doc-title">Decarbonisation Pathways for Indonesia’s Buses Infrastructure Poster</div>
                     <div class="doc-sub text-muted">
-                      Updated <time datetime="2025-09-01">Sep 1, 2025</time> · 1.2 MB
+                      Updated <time datetime="2024-2025">2024 - 2025</time> · 3.2 MB
                     </div>
                   </div>
-                  <span class="doc-cta">Download</span>
-                </a>
+                  <div class="doc-actions">
+                    <button class="btn btn-sm btn-outline-primary doc-view" type="button">View</button>
+                    <a class="btn btn-sm doc-dl"
+                      href="assets/pdfs/Decarbonisation Pathways for Indonesia’s Buses Infrastructure (DIBI) using Routing Energy Estimation Tool, Renewable Energy, and Ecosystem Modelling.pdf"
+                      download>Download</a>
+                  </div>
+                </article>
 
-                <a class="doc-item" href="assets/docs/air-quality-baseline.pdf">
+                <!-- Item 2 -->
+                <article class="doc-item" data-pdf="assets/pdfs/UCST0365_Koneksi-Flyer_A4_241021_DIGITAL.pdf"
+                  data-title="UCST0365 Koneksi Flyer DIGITAL" data-updated="2024-2025" data-size="540 KB">
                   <div class="doc-icon">PDF</div>
                   <div class="doc-meta">
-                    <div class="doc-title">Air Quality Baseline</div>
+                    <div class="doc-title">UCST0365 Koneksi Flyer DIGITAL</div>
                     <div class="doc-sub text-muted">
-                      Updated <time datetime="2025-08-18">Aug 18, 2025</time> · 980 KB
+                      Updated <time datetime="2025-08-18">2024 - 2025</time> · 540 KB
                     </div>
                   </div>
-                  <span class="doc-cta">Download</span>
-                </a>
-
-                <a class="doc-item" href="assets/docs/renewable-integration.pdf">
-                  <div class="doc-icon">PDF</div>
-                  <div class="doc-meta">
-                    <div class="doc-title">Renewable Integration Case Study</div>
-                    <div class="doc-sub text-muted">
-                      Updated <time datetime="2025-08-02">Aug 2, 2025</time> · 1.6 MB
-                    </div>
+                  <div class="doc-actions">
+                    <button class="btn btn-sm btn-outline-primary doc-view" type="button">View</button>
+                    <a class="btn btn-sm doc-dl" href="assets/pdfs/UCST0365_Koneksi-Flyer_A4_241021_DIGITAL.pdf"
+                      download>Download</a>
                   </div>
-                  <span class="doc-cta">Download</span>
-                </a>
+                </article>
               </div>
 
-              <p class="small text-muted mt-3 mb-0">Replace links and dates with your real documents as they’re
-                published.</p>
+              <!-- Lightbox-style PDF viewer (Bootstrap Modal) -->
+              <div class="modal fade" id="pdfViewerModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen">
+                  <div class="modal-content bg-dark">
+                    <div class="modal-header border-0">
+                      <h5 class="modal-title text-white" id="pdfViewerTitle">Document</h5>
+                      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-0">
+                      <!-- Use #toolbar=0 to declutter; remove if you want native toolbar -->
+                      <iframe id="pdfFrame" src="" title="PDF viewer" width="100%" height="100%"
+                        style="border:0;"></iframe>
+                    </div>
+                    <div class="modal-footer border-0">
+                      <a id="pdfDownload" href="#" download class="btn btn-outline-light">Download</a>
+                      <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -713,43 +735,51 @@
             <div class="card-body p-3 p-md-4">
               <div class="d-flex align-items-center justify-content-between mb-3">
                 <h3 class="h5 mb-0">News & Events</h3>
-                <span class="badge rounded-pill bg-success-subtle text-success fw-semibold">Upcoming</span>
+                <span class="badge rounded-pill bg-success-subtle text-success fw-semibold">Updates</span>
               </div>
 
               <ul class="timeline list-unstyled m-0">
-                <li class="timeline-item">
-                  <div class="t-dot bg-success"></div>
-                  <div class="t-meta">
-                    <div class="fw-semibold">Stakeholder Workshop (Jakarta)</div>
-                    <div class="text-muted small">Date TBC · Policy & operator engagement</div>
-                  </div>
-                </li>
-
+                <!-- Event: Jakarta -->
                 <li class="timeline-item">
                   <div class="t-dot bg-primary"></div>
                   <div class="t-meta">
-                    <div class="fw-semibold">Partner Seminar (UNS & UMN)</div>
-                    <div class="text-muted small">Q4 2025 (tentative) · Findings & case studies</div>
+                    <div class="fw-semibold">
+                      <a href="en/gallery.html#album-jakarta-2025" class="text-decoration-none">Jakarta Event</a>
+                    </div>
+                    <div class="text-muted small">Jakarta, Indonesia · Photo highlights</div>
                   </div>
                 </li>
 
+                <!-- Event: Koneksi Signup Ceremony -->
                 <li class="timeline-item">
-                  <div class="t-dot bg-warning"></div>
+                  <div class="t-dot bg-success"></div>
                   <div class="t-meta">
-                    <div class="fw-semibold">DIBI Project Brief – v1.0</div>
-                    <div class="text-muted small">Published Jul 2025 · Overview & objectives</div>
+                    <div class="fw-semibold">
+                      <a href="en/gallery.html#album-signup-2024" class="text-decoration-none">Koneksi Signup
+                        Ceremony</a>
+                    </div>
+                    <div class="text-muted small">Canberra (UC), Australia · Photo highlights</div>
+                  </div>
+                </li>
+
+                <!-- No news yet -->
+                <li class="timeline-item">
+                  <div class="t-dot bg-secondary"></div>
+                  <div class="t-meta">
+                    <div class="fw-semibold text-muted">No news items yet</div>
+                    <div class="text-muted small">Media statements will appear here when published</div>
                   </div>
                 </li>
               </ul>
 
               <div class="mt-4">
-                <a href="en/news.html" class="btn btn-outline-secondary btn-sm">All news</a>
+                <a href="en/media-releases.html" class="btn btn-outline-secondary btn-sm">Media releases</a>
                 <a href="en/events.html" class="btn btn-outline-secondary btn-sm ms-2">All events</a>
               </div>
             </div>
           </div>
         </div>
-      </div> <!-- /row -->
+      </div>
     </div>
   </section>
 
@@ -778,6 +808,39 @@
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
   <script src="assets/js/include.js" defer></script>
+
+  <script>
+    // Hook up "View" buttons to open PDFs in a fullscreen Bootstrap modal
+    (() => {
+      const modalEl = document.getElementById('pdfViewerModal');
+      const frame = document.getElementById('pdfFrame');
+      const titleEl = document.getElementById('pdfViewerTitle');
+      const dlEl = document.getElementById('pdfDownload');
+      let bsModal;
+
+      function openPDF(src, title) {
+        // Hint: append #toolbar=0 to hide PDF viewer toolbar
+        const url = src.includes('#') ? src : src + '#toolbar=0';
+        frame.src = url;
+        titleEl.textContent = title || 'Document';
+        dlEl.href = src;
+        bsModal = bsModal || new bootstrap.Modal(modalEl, { backdrop: true, focus: true });
+        bsModal.show();
+      }
+
+      // Clear src on hide (releases memory on mobile)
+      modalEl.addEventListener('hidden.bs.modal', () => { frame.src = ''; });
+
+      document.querySelectorAll('.doc-item .doc-view').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const item = btn.closest('.doc-item');
+          const src = item?.dataset.pdf;
+          const title = item?.dataset.title;
+          if (src) openPDF(src, title);
+        });
+      });
+    })();
+  </script>
 </body>
 
 </html>

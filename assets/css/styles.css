@@ -232,6 +232,22 @@ section+section {
   font-size: 18px;
   line-height: 1;
 }
+/* Soft vignette + gradient for captions */
+.carousel-item .carousel-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  /* Top-to-bottom gradient plus a subtle edge vignette */
+  background:
+    radial-gradient(120% 120% at 50% 0%, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.10) 50%, rgba(0,0,0,0.0) 70%) ,
+    linear-gradient(to top, rgba(0,0,0,0.55), rgba(0,0,0,0.10) 45%, rgba(0,0,0,0.0) 70%);
+  box-shadow: inset 0 0 40px rgba(0,0,0,0.25);
+}
+
+/* Optional: make caption a bit more readable on small screens */
+.carousel-caption {
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
 
 /* ------- Fancy Highlight Pillars ------------*/
 .highlights {
