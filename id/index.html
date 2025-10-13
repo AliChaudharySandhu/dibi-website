@@ -30,7 +30,7 @@
   <div id="navbar" data-include="navbar"></div>
 
   <!-- HERO: Carousel -->
-  <header class="bg-dark">
+  <section class="hero">
     <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"
@@ -41,45 +41,47 @@
 
       <div class="carousel-inner">
         <!-- Slide 1 -->
-        <div class="carousel-item active">
-          <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="1200" height="500"
-            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice"
-            focusable="false">
-            <rect width="100%" height="100%" fill="#6c757d"></rect>
-            <text x="50%" y="50%" fill="#fff" dy=".3em" text-anchor="middle" font-size="40">Slide 1 – Judul Proyek</text>
-          </svg>
+        <div class="carousel-item active position-relative">
+          <img src="assets/images/hero-section/hero-image_01.webp" class="d-block w-100"
+            alt="Gambar hero Jalur Dekarbonisasi" style="height:500px; object-fit:cover;" />
+          <div class="carousel-overlay"></div>
           <div class="carousel-caption text-start">
             <h1 class="display-6 fw-bold">Jalur Dekarbonisasi</h1>
-            <p>Teks contoh yang menjelaskan slide pertama.</p>
+            <p>Kami membuat kembar digital (digital twin) depo bus dengan perangkat lunak Australia dan model estimasi
+              energi rute untuk merencanakan peralihan ke bus listrik yang hemat biaya dan mudah ditingkatkan—mengurangi
+              emisi serta mendukung rantai nilai baterai Indonesia.</p>
           </div>
         </div>
 
         <!-- Slide 2 -->
-        <div class="carousel-item">
-          <svg class="bd-placeholder-img d-block w-100" width="1200" height="500" xmlns="http://www.w3.org/2000/svg">
-            <rect width="100%" height="100%" fill="#198754"></rect>
-            <text x="50%" y="50%" fill="#fff" dy=".3em" text-anchor="middle" font-size="40">Slide 2 – Keberlanjutan</text>
-          </svg>
+        <div class="carousel-item position-relative">
+          <img src="assets/images/hero-section/hero-image_02.webp" class="d-block w-100"
+            alt="Gambar hero Integrasi Energi Terbarukan" style="height:500px; object-fit:cover;" />
+          <div class="carousel-overlay"></div>
           <div class="carousel-caption text-start">
             <h1 class="display-6 fw-bold">Integrasi Energi Terbarukan</h1>
-            <p>Teks contoh yang menjelaskan slide kedua.</p>
+            <p>Kami memodelkan opsi surya, penyimpanan, dan jaringan serta mengoptimalkan pengisian di depo, sambil
+              menilai efisiensi bangunan dan kenyamanan termal untuk menurunkan polutan (PM2.5, PM10, karbon, nitrat).
+            </p>
           </div>
         </div>
 
         <!-- Slide 3 -->
-        <div class="carousel-item">
-          <svg class="bd-placeholder-img d-block w-100" width="1200" height="500" xmlns="http://www.w3.org/2000/svg">
-            <rect width="100%" height="100%" fill="#0d6efd"></rect>
-            <text x="50%" y="50%" fill="#fff" dy=".3em" text-anchor="middle" font-size="40">Slide 3 – Inklusi</text>
-          </svg>
+        <div class="carousel-item position-relative">
+          <img src="assets/images/hero-section/hero-image_03.webp" class="d-block w-100"
+            alt="Gambar hero Kesetaraan dan Inklusi" style="height:500px; object-fit:cover;" />
+          <div class="carousel-overlay"></div>
           <div class="carousel-caption text-start">
             <h1 class="display-6 fw-bold">Kesetaraan & Inklusi</h1>
-            <p>Teks contoh yang menjelaskan slide ketiga.</p>
+            <p>Melalui survei dan FGD berperspektif GEDSI serta observasi lapangan, kami menelaah siapa yang mendapat
+              manfaat dan bagaimana. Temuan awal menunjukkan perempuan sekitar 77% pengguna dan banyak yang merasakan
+              panas—bukti yang memandu transportasi publik yang lebih inklusif dan sehat.</p>
           </div>
         </div>
       </div>
 
-      <!-- Kontrol -->
+
+      <!-- Controls -->
       <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon"></span>
       </button>
@@ -87,7 +89,7 @@
         <span class="carousel-control-next-icon"></span>
       </button>
     </div>
-  </header>
+  </section>
 
   <!-- TENTANG KONEKSI + PROYEK -->
   <section class="py-5 bg-light">
@@ -108,7 +110,8 @@
           <div class="p-4 border rounded-3 bg-white h-100">
             <h3 class="h4">Sorotan Riset: DIBI</h3>
             <p class="mb-2">Proyek DIBI yang didanai KONEKSI mengintegrasikan simulasi rute & estimasi energi,
-              energi terbarukan, serta perencanaan infrastruktur berbasis ekosistem untuk mempercepat elektrifikasi bus di Indonesia.</p>
+              energi terbarukan, serta perencanaan infrastruktur berbasis ekosistem untuk mempercepat elektrifikasi bus
+              di Indonesia.</p>
             <!-- Kisi fitur -->
             <div class="row row-cols-1 row-cols-sm-2 g-3 mt-2">
               <div class="col">
@@ -192,7 +195,8 @@
             <div class="pillar-icon mb-3 text-warning">🤝</div>
             <h3 class="h5 mb-2">Hasil Berbasis Kesetaraan (GEDSI)</h3>
             <p class="text-muted mb-0 small">
-              Memastikan perempuan, penyandang disabilitas, dan kelompok rentan memperoleh manfaat yang setara dari elektrifikasi.
+              Memastikan perempuan, penyandang disabilitas, dan kelompok rentan memperoleh manfaat yang setara dari
+              elektrifikasi.
             </p>
           </div>
         </div>
@@ -215,7 +219,7 @@
         <div class="col">
           <a class="logo-card" href="https://www.canberra.edu.au/" target="_blank" rel="noopener">
             <div class="logo-frame">
-              <img src="assets/images/university-of-canberra-logo.png" alt="University of Canberra">
+              <img src="assets/images/organisations/university-of-canberra-logo.png" alt="University of Canberra">
             </div>
           </a>
         </div>
@@ -224,7 +228,7 @@
         <div class="col">
           <a class="logo-card" href="https://uns.ac.id/en/" target="_blank" rel="noopener">
             <div class="logo-frame">
-              <img src="assets/images/UNS-logo.webp" alt="UNIVERSITAS SEBELAS MARET">
+              <img src="assets/images/organisations/UNS-logo.webp" alt="UNIVERSITAS SEBELAS MARET">
             </div>
           </a>
         </div>
@@ -233,7 +237,8 @@
         <div class="col">
           <a class="logo-card" href="https://nevce.au/" target="_blank" rel="noopener">
             <div class="logo-frame">
-              <img src="assets/images/NEVCE-logo.avif" alt="National Electric Vehicle Centre of Excellence">
+              <img src="assets/images/organisations/NEVCE-logo.avif"
+                alt="National Electric Vehicle Centre of Excellence">
             </div>
           </a>
         </div>
@@ -242,7 +247,7 @@
         <div class="col">
           <a class="logo-card" href="https://evenergi.com/" target="_blank" rel="noopener">
             <div class="logo-frame">
-              <img src="assets/images/evenergi-logo.png" alt="Evenergi Pty Ltd">
+              <img src="assets/images/organisations/evenergi-logo.png" alt="Evenergi Pty Ltd">
             </div>
           </a>
         </div>
@@ -251,7 +256,7 @@
         <div class="col">
           <a class="logo-card" href="https://itprenewables.com/" target="_blank" rel="noopener">
             <div class="logo-frame">
-              <img src="assets/images/ITP-logo.png" alt="ITP Renewables (Australia) Pty Ltd">
+              <img src="assets/images/organisations/ITP-logo.png" alt="ITP Renewables (Australia) Pty Ltd">
             </div>
           </a>
         </div>
@@ -260,7 +265,7 @@
         <div class="col">
           <a class="logo-card" href="https://www.brin.go.id/en" target="_blank" rel="noopener">
             <div class="logo-frame">
-              <img src="assets/images/brin-logo.png" alt="BRIN - Badan Riset dan Inovasi Nasional">
+              <img src="assets/images/organisations/brin-logo.png" alt="BRIN - Badan Riset dan Inovasi Nasional">
             </div>
           </a>
         </div>
@@ -269,7 +274,7 @@
         <div class="col">
           <a class="logo-card" href="https://www.umn.ac.id/en/home" target="_blank" rel="noopener">
             <div class="logo-frame">
-              <img src="assets/images/UMN-logo.webp" alt="Universitas Multimedia Nusantara">
+              <img src="assets/images/organisations/UMN-logo.webp" alt="Universitas Multimedia Nusantara">
             </div>
           </a>
         </div>
@@ -278,7 +283,7 @@
         <div class="col">
           <a class="logo-card" href="https://icenergyinstitute.com/" target="_blank" rel="noopener">
             <div class="logo-frame">
-              <img src="assets/images/icenergy-logo.png" alt="ICENERGY">
+              <img src="assets/images/organisations/icenergy-logo.png" alt="ICENERGY">
             </div>
           </a>
         </div>
@@ -287,7 +292,7 @@
         <div class="col">
           <a class="logo-card" href="https://iclei-europe.org/" target="_blank" rel="noopener">
             <div class="logo-frame">
-              <img src="assets/images/ICLEI-logo.png" alt="ICLEI – Local Governments for Sustainability">
+              <img src="assets/images/organisations/ICLEI-logo.png" alt="ICLEI – Local Governments for Sustainability">
             </div>
           </a>
         </div>
@@ -598,7 +603,8 @@
               <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
                 <span class="legend-dot bg-theme-energy"></span><span class="legend-text">Energi</span>
                 <span class="legend-dot bg-theme-ops ms-3"></span><span class="legend-text">Operasi</span>
-                <span class="legend-dot bg-theme-built ms-3"></span><span class="legend-text">Lingkungan Terbangun</span>
+                <span class="legend-dot bg-theme-built ms-3"></span><span class="legend-text">Lingkungan
+                  Terbangun</span>
                 <span class="legend-dot bg-theme-equity ms-3"></span><span class="legend-text">Kesetaraan</span>
               </div>
 
@@ -658,93 +664,126 @@
             <div class="card-body p-3 p-md-4">
               <div class="d-flex align-items-center justify-content-between mb-3">
                 <h3 class="h5 mb-0">Keluaran Terbaru</h3>
-                <span class="badge rounded-pill bg-primary-subtle text-primary fw-semibold">Laporan Akademik & Teknis</span>
+                <span class="badge rounded-pill bg-primary-subtle text-primary fw-semibold">Laporan Akademik &
+                  Teknis</span>
               </div>
 
-              <div class="doc-list">
-                <!-- Item dokumen -->
-                <a class="doc-item" href="assets/docs/depot-efficiency.pdf">
+              <!-- PDF List -->
+              <div class="doc-list" id="pdf-list">
+                <!-- Item 1 -->
+                <article class="doc-item"
+                  data-pdf="assets/pdfs/Decarbonisation Pathways for Indonesia’s Buses Infrastructure (DIBI) using Routing Energy Estimation Tool, Renewable Energy, and Ecosystem Modelling.pdf"
+                  data-title="Poster Jalur Dekarbonisasi untuk Infrastruktur Bus Indonesia (DIBI)"
+                  data-updated="2024-2025" data-size="3.2 MB">
                   <div class="doc-icon">PDF</div>
                   <div class="doc-meta">
-                    <div class="doc-title">Laporan Efisiensi Energi Depo</div>
+                    <div class="doc-title">Poster Jalur Dekarbonisasi untuk Infrastruktur Bus Indonesia</div>
                     <div class="doc-sub text-muted">
-                      Diperbarui <time datetime="2025-09-01">1 Sep 2025</time> · 1,2 MB
+                      Diperbarui <time datetime="2024-2025">2024 - 2025</time> · 3.2 MB
                     </div>
                   </div>
-                  <span class="doc-cta">Unduh</span>
-                </a>
+                  <div class="doc-actions">
+                    <button class="btn btn-sm btn-outline-primary doc-view" type="button">Lihat</button>
+                    <a class="btn btn-sm doc-dl"
+                      href="assets/pdfs/Decarbonisation Pathways for Indonesia’s Buses Infrastructure (DIBI) using Routing Energy Estimation Tool, Renewable Energy, and Ecosystem Modelling.pdf"
+                      download>Unduh</a>
+                  </div>
+                </article>
 
-                <a class="doc-item" href="assets/docs/air-quality-baseline.pdf">
+                <!-- Item 2 -->
+                <article class="doc-item" data-pdf="assets/pdfs/UCST0365_Koneksi-Flyer_A4_241021_DIGITAL.pdf"
+                  data-title="Selebaran KONEKSI UCST0365 (Digital)" data-updated="2024-2025" data-size="540 KB">
                   <div class="doc-icon">PDF</div>
                   <div class="doc-meta">
-                    <div class="doc-title">Baseline Kualitas Udara</div>
+                    <div class="doc-title">Selebaran KONEKSI UCST0365 (Digital)</div>
                     <div class="doc-sub text-muted">
-                      Diperbarui <time datetime="2025-08-18">18 Agt 2025</time> · 980 KB
+                      Diperbarui <time datetime="2025-08-18">2024 - 2025</time> · 540 KB
                     </div>
                   </div>
-                  <span class="doc-cta">Unduh</span>
-                </a>
-
-                <a class="doc-item" href="assets/docs/renewable-integration.pdf">
-                  <div class="doc-icon">PDF</div>
-                  <div class="doc-meta">
-                    <div class="doc-title">Studi Kasus Integrasi Energi Terbarukan</div>
-                    <div class="doc-sub text-muted">
-                      Diperbarui <time datetime="2025-08-02">2 Agt 2025</time> · 1,6 MB
-                    </div>
+                  <div class="doc-actions">
+                    <button class="btn btn-sm btn-outline-primary doc-view" type="button">Lihat</button>
+                    <a class="btn btn-sm doc-dl" href="assets/pdfs/UCST0365_Koneksi-Flyer_A4_241021_DIGITAL.pdf"
+                      download>Unduh</a>
                   </div>
-                  <span class="doc-cta">Unduh</span>
-                </a>
+                </article>
               </div>
 
-              <p class="small text-muted mt-3 mb-0">Ganti tautan dan tanggal dengan dokumen asli Anda saat dipublikasikan.</p>
+              <!-- Lightbox-style PDF viewer (Bootstrap Modal) -->
+              <div class="modal fade" id="pdfViewerModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen">
+                  <div class="modal-content bg-dark">
+                    <div class="modal-header border-0">
+                      <h5 class="modal-title text-white" id="pdfViewerTitle">Dokumen</h5>
+                      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-0">
+                      <!-- Use #toolbar=0 to declutter; remove if you want native toolbar -->
+                      <iframe id="pdfFrame" src="" title="PDF viewer" width="100%" height="100%"
+                        style="border:0;"></iframe>
+                    </div>
+                    <div class="modal-footer border-0">
+                      <a id="pdfDownload" href="#" download class="btn btn-outline-light">Unduh</a>
+                      <button type="button" class="btn btn-light" data-bs-dismiss="modal">Tutup</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Berita & Acara -->
+        <!-- News & Events -->
         <div class="col-lg-5">
           <div class="card border-0 shadow-sm rounded-4 h-100">
             <div class="card-body p-3 p-md-4">
               <div class="d-flex align-items-center justify-content-between mb-3">
                 <h3 class="h5 mb-0">Berita & Acara</h3>
-                <span class="badge rounded-pill bg-success-subtle text-success fw-semibold">Mendatang</span>
+                <span class="badge rounded-pill bg-success-subtle text-success fw-semibold">Pembaruan</span>
               </div>
 
               <ul class="timeline list-unstyled m-0">
-                <li class="timeline-item">
-                  <div class="t-dot bg-success"></div>
-                  <div class="t-meta">
-                    <div class="fw-semibold">Lokakarya Pemangku Kepentingan (Jakarta)</div>
-                    <div class="text-muted small">Tanggal menyusul · Keterlibatan kebijakan & operator</div>
-                  </div>
-                </li>
-
+                <!-- Event: Jakarta -->
                 <li class="timeline-item">
                   <div class="t-dot bg-primary"></div>
                   <div class="t-meta">
-                    <div class="fw-semibold">Seminar Mitra (UNS & UMN)</div>
-                    <div class="text-muted small">Kuartal 4 2025 (tentatif) · Temuan & studi kasus</div>
+                    <div class="fw-semibold">
+                      <a href="id/gallery.html#album-jakarta-2025" class="text-decoration-none">Acara Jakarta</a>
+                    </div>
+                    <div class="text-muted small">Jakarta, Indonesia · Sorotan foto</div>
                   </div>
                 </li>
 
+                <!-- Event: Koneksi Signup Ceremony -->
                 <li class="timeline-item">
-                  <div class="t-dot bg-warning"></div>
+                  <div class="t-dot bg-success"></div>
                   <div class="t-meta">
-                    <div class="fw-semibold">Ringkasan Proyek DIBI – v1.0</div>
-                    <div class="text-muted small">Diterbitkan Jul 2025 · Ikhtisar & tujuan</div>
+                    <div class="fw-semibold">
+                      <a href="id/gallery.html#album-signup-2024" class="text-decoration-none">Upacara Pendaftaran
+                        Koneksi</a>
+                    </div>
+                    <div class="text-muted small">Canberra (UC), Australia · Sorotan foto</div>
+                  </div>
+                </li>
+
+                <!-- No news yet -->
+                <li class="timeline-item">
+                  <div class="t-dot bg-secondary"></div>
+                  <div class="t-meta">
+                    <div class="fw-semibold text-muted">Belum ada berita</div>
+                    <div class="text-muted small">Pernyataan media akan muncul di sini saat diterbitkan</div>
                   </div>
                 </li>
               </ul>
 
               <div class="mt-4">
-                <a href="id/news.html" class="btn btn-outline-secondary btn-sm">Semua berita</a>
+                <a href="id/media-releases.html" class="btn btn-outline-secondary btn-sm">Siaran pers</a>
                 <a href="id/events.html" class="btn btn-outline-secondary btn-sm ms-2">Semua acara</a>
               </div>
             </div>
           </div>
         </div>
-      </div> <!-- /row -->
+      </div>
     </div>
   </section>
 
@@ -755,7 +794,8 @@
       <div class="row align-items-center g-3">
         <div class="col-lg-8">
           <h2 class="h1 mb-2">Berkolaborasi dengan kami</h2>
-          <p class="lead mb-0">Pembuat kebijakan, operator, peneliti, dan komunitas — mari wujudkan transportasi publik yang inklusif dan rendah karbon.</p>
+          <p class="lead mb-0">Pembuat kebijakan, operator, peneliti, dan komunitas — mari wujudkan transportasi publik
+            yang inklusif dan rendah karbon.</p>
         </div>
         <div class="col-lg-4 text-lg-end">
           <a class="btn btn-light btn-lg" href="id/contact.html">Hubungi tim</a>
@@ -772,6 +812,39 @@
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
   <script src="assets/js/include.js" defer></script>
+
+  <script>
+    // Hook up "View" buttons to open PDFs in a fullscreen Bootstrap modal
+    (() => {
+      const modalEl = document.getElementById('pdfViewerModal');
+      const frame = document.getElementById('pdfFrame');
+      const titleEl = document.getElementById('pdfViewerTitle');
+      const dlEl = document.getElementById('pdfDownload');
+      let bsModal;
+
+      function openPDF(src, title) {
+        // Hint: append #toolbar=0 to hide PDF viewer toolbar
+        const url = src.includes('#') ? src : src + '#toolbar=0';
+        frame.src = url;
+        titleEl.textContent = title || 'Document';
+        dlEl.href = src;
+        bsModal = bsModal || new bootstrap.Modal(modalEl, { backdrop: true, focus: true });
+        bsModal.show();
+      }
+
+      // Clear src on hide (releases memory on mobile)
+      modalEl.addEventListener('hidden.bs.modal', () => { frame.src = ''; });
+
+      document.querySelectorAll('.doc-item .doc-view').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const item = btn.closest('.doc-item');
+          const src = item?.dataset.pdf;
+          const title = item?.dataset.title;
+          if (src) openPDF(src, title);
+        });
+      });
+    })();
+  </script>
 </body>
 
 </html>
