@@ -109,7 +109,8 @@ main {
 }
 
 .navbar .dropdown-item:hover,
-.navbar .dropdown-item:focus {
+.navbar .dropdown-item:focus,
+.navbar .dropdown-item.active {
   background-color: var(--dibi-primary);
   color: var(--dibi-text-on-dark);
   /* white on teal */
@@ -588,8 +589,8 @@ section+section {
 .btn:active,
 .btn:first-child:active,
 .btn:focus-visible {
-  background-color: var(--dibi-primary);
-  border-color: var(--dibi-primary);
+  background-color: var(--dibi-primary)!important;
+  border-color: var(--dibi-primary)!important;
   color: #fff;
   box-shadow: none;
 }
