@@ -2,7 +2,7 @@
 <html lang="id">
 
 <head>
-  
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kontak | DIBI</title>
@@ -25,90 +25,26 @@
 
 <body>
   <div id="navbar"></div>
+  <!-- Dibi Microsoft Form will appear here -->
+  <!-- Dont Make any changes here. Just Update the MS_FORM_EMBED_URL in Config.js -->
+  <div class="p-4 bg-white border rounded-4 h-100" data-msform></div>
 
-  <main class="py-5">
-    <div class="container">
-      <header class="mb-4">
-        <h1 class="display-6 fw-semibold">Hubungi Tim DIBI</h1>
-        <p class="text-muted mb-0">Kami menyambut kolaborasi di bidang kebijakan, operasional, dan penelitian.</p>
-      </header>
-
-      <section class="row g-4">
-        <div class="col-lg-7">
-          <div class="p-4 bg-white border rounded-4 h-100">
-            <form action="mailto:DIBI-KONEKSI@canberra.edu.au" method="GET" enctype="text/plain">
-              <div class="row g-3">
-                <div class="col-md-6">
-                  <label class="form-label">Nama lengkap</label>
-                  <input type="text" class="form-control" name="name" placeholder="Nama Anda" required>
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label">Email</label>
-                  <input type="email" class="form-control" name="email" placeholder="nama@organisasi.com" required>
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label">Organisasi</label>
-                  <input type="text" class="form-control" name="organisation"
-                    placeholder="misal: Pemerintah Kota / Universitas">
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label">Topik</label>
-                  <select class="form-select" name="topic">
-                    <option>Pertanyaan umum</option>
-                    <option>Kemitraan</option>
-                    <option>Media</option>
-                    <option>Akses ke keluaran proyek</option>
-                  </select>
-                </div>
-                <div class="col-12">
-                  <label class="form-label">Pesan</label>
-                  <textarea class="form-control" name="message" rows="5" placeholder="Bagaimana kami dapat membantu?"
-                    required></textarea>
-                </div>
-                <div class="col-12">
-                  <button type="submit" class="btn btn-primary">Kirim pesan</button>
-                </div>
-              </div>
-            </form>
-
-            <p class="small text-muted mt-3 mb-0">
-              *Formulir ini akan membuka aplikasi email default Anda untuk mengirim pesan langsung ke tim DIBI.
-            </p>
-
-          </div>
-        </div>
-
-        <div class="col-lg-5">
-          <div class="p-4 bg-white border rounded-4 h-100">
-            <h2 class="h5">Kontak Proyek</h2>
-            <p class="mb-1"><strong>Kantor Proyek DIBI</strong></p>
-            <p class="mb-2 small text-muted">University of Canberra (RC-disc)</p>
-            <p class="mb-1"><a class="link-primary" href="mailto:DIBI-KONEKSI@canberra.edu.au">DIBI-KONEKSI@canberra.edu.au</a></p>
-
-            <hr>
-
-            <h3 class="h6">Media & Kemitraan</h3>
-            <p class="mb-1"><a class="link-primary"
-                href="mailto:DIBI-KONEKSI@canberra.edu.au">DIBI-KONEKSI@canberra.edu.au</a></p>
-
-            <div class="ratio ratio-16x9 mt-3">
-              <!-- Replace with real map embed if desired -->
-              <iframe src="about:blank" title="Map placeholder"></iframe>
-            </div>
-          </div>
-        </div>
-      </section>
-
-    </div>
-  </main>
-
-  <div id="footer"></div>
+  <div id="footer">
+    <footer class="bg-light border-top py-3 mt-5">
+      <div class="container text-center small text-muted">
+        © 2025 DIBI Knowledge Platform |
+        <a href="contact.html" class="link-secondary">Contact</a>
+      </div>
+    </footer>
+  </div>
 
   <!-- Bootstrap JS + Include script -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
+  <script defer src="../assets/js/config.js"></script>
   <script src="../assets/js/include.js"></script>
+  <script defer src="../assets/js/form-embed.js"></script>
 </body>
 
 </html>

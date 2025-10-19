@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact | DIBI</title>
@@ -26,81 +26,10 @@
 <body>
   <div id="navbar"></div>
 
-  <main class="py-5">
-    <div class="container">
-      <header class="mb-4">
-        <h1 class="display-6 fw-semibold">Contact the DIBI Team</h1>
-        <p class="text-muted mb-0">We welcome collaboration across policy, operations, and research.</p>
-      </header>
-
-      <section class="row g-4">
-        <div class="col-lg-7">
-          <div class="p-4 bg-white border rounded-4 h-100">
-            <form action="mailto:DIBI-KONEKSI@canberra.edu.au" method="GET" enctype="text/plain">
-              <div class="row g-3">
-                <div class="col-md-6">
-                  <label class="form-label">Full name</label>
-                  <input type="text" class="form-control" name="name" placeholder="Your name" required>
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label">Email</label>
-                  <input type="email" class="form-control" name="email" placeholder="name@org.com" required>
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label">Organisation</label>
-                  <input type="text" class="form-control" name="organisation" placeholder="e.g., City Gov / University">
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label">Topic</label>
-                  <select class="form-select" name="topic">
-                    <option>General enquiry</option>
-                    <option>Partnerships</option>
-                    <option>Media</option>
-                    <option>Access to outputs</option>
-                  </select>
-                </div>
-                <div class="col-12">
-                  <label class="form-label">Message</label>
-                  <textarea class="form-control" name="message" rows="5" placeholder="How can we help?"
-                    required></textarea>
-                </div>
-                <div class="col-12">
-                  <button type="submit" class="btn btn-primary">Send message</button>
-                </div>
-              </div>
-            </form>
-
-            <p class="small text-muted mt-3 mb-0">
-              *This form opens your default email app to send a message directly to the DIBI team.
-            </p>
-
-          </div>
-        </div>
-
-        <div class="col-lg-5">
-          <div class="p-4 bg-white border rounded-4 h-100">
-            <h2 class="h5">Project Contact</h2>
-            <p class="mb-1"><strong>DIBI Project Office</strong></p>
-            <p class="mb-2 small text-muted">University of Canberra (RC-disc)</p>
-            <p class="mb-1"><a class="link-primary" href="mailto:DIBI-KONEKSI@canberra.edu.au">DIBI-KONEKSI@canberra.edu.au</a></p>
-
-            <hr>
-
-            <h3 class="h6">Media & Partnerships</h3>
-            <p class="mb-1"><a class="link-primary"
-                href="mailto:DIBI-KONEKSI@canberra.edu.au">DIBI-KONEKSI@canberra.edu.au</a></p>
-
-            <div class="ratio ratio-16x9 mt-3">
-              <!-- Replace with real map embed if desired -->
-              <iframe src="about:blank" title="Map placeholder"></iframe>
-            </div>
-          </div>
-        </div>
-      </section>
-
-    </div>
-  </main>
-
+  <!-- Dibi Microsoft Form will appear here -->
+  <!-- Dont Make any changes here. Just Update the MS_FORM_EMBED_URL in Config.js -->
+  <div class="p-4 bg-white border rounded-4 h-100" data-msform></div>
+  
   <div id="footer"></div>
 
   <!-- Bootstrap JS + Include script -->
@@ -108,6 +37,8 @@
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
   <script src="../assets/js/include.js"></script>
+  <script defer src="../assets/js/config.js"></script>
+  <script defer src="../assets/js/form-embed.js"></script>
 </body>
 
 </html>
