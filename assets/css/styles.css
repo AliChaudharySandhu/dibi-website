@@ -304,7 +304,7 @@ section+section {
 }
 
 .logo-frame img {
-  width: 100%;
+  width: 70%;
   height: auto;
   object-fit: contain;
 }
@@ -312,8 +312,8 @@ section+section {
 /* -----------------Investegators and Team ---------- */
 /* Circular avatar placeholder */
 .avatar-circle {
-  width: 150px;
-  height: 150px;
+  width: 125px;
+  height: 125px;
   border-radius: 50%;
   background: #f1f3f5;
   /* light grey fallback */
@@ -830,4 +830,28 @@ section+section {
 
 @media (max-width: 576px) {
   .media-card-img { height: 140px; }
+}
+
+.carousel-item img {
+  height: 500px;
+  object-fit: cover;
+  object-position: center; 
+}
+@media (min-width: 1400px) {
+  .carousel-item img {
+    object-position: 0 30%;
+  }
+}
+
+@media (min-width: 1700px) {
+  .carousel-item img {
+    height: 600px;
+    object-position: 0 30%;
+  }
+}
+
+@media (min-width: 2200px) {
+  .carousel-item img {
+    height: 700px;
+  }
 }
